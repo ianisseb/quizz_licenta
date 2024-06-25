@@ -114,7 +114,7 @@
       "d": "R1 = (R - Y), R2 = (XX)",
       "e": "R1 = KY, R2 = (XX)"
     },
-    "correct": ["a", "d", "e"]
+    "correct": ["b"]
   },
 
   {
@@ -307,17 +307,6 @@
       "d": "Seriabilitatea tranzacțiilor",
       "e": "Toate"
     },
-    "correct": ["a", "c"]
-  },
-  {
-    "question": "O bază de date distribuită se găsește implementată numai:",
-    "answers": {
-      "a": "Într-o rețea de calculatoare",
-      "b": "Pe un calculator performant",
-      "c": "Pe mai multe calculatoare izolate, conectate la Internet",
-      "d": "Pe un calculator client",
-      "e": "Pe un laptop"
-    },
     "correct": ["a"]
   },
   {
@@ -331,7 +320,6 @@
     },
     "correct": ["a"]
   },
-
   {
     "question": "Tranzacțiile se numesc în 2 faze dacă:",
     "answers": {
@@ -365,7 +353,7 @@
       "d": "Dacă se execută de două ori succesiv, nu produce rezultate",
       "e": "Dacă se execută de două ori succesiv, dublează înregistrările din tabelă"
     },
-    "correct": ["b"]
+    "correct": ["b", "d"]
   },
 
   {
@@ -425,7 +413,7 @@
       "d": "Comanda UPDATE poate modifica mai multe linii din tabela ANGAJATI",
       "e": "Comanda UPDATE nu poate modifica mai multe linii din tabela ANGAJATI"
     },
-    "correct": ["b", "c", "d", "a"]
+    "correct": ["a", "b", "c", "d"]
   },
 
   {
@@ -453,7 +441,7 @@
   },
 
   {
-    "question": "Fie tabelul ANGAJAT(Marca, Numepren, Compart, Datasv, Salorar, Salorarco, Compart) cu interogarea:\n\n`sql\nSELECT marca, Numepren, Datasv, vechime(datasv, 2008, 7) FROM ANGAJAT\n`\n\nși funcția:\n\n`sql\nCREATE OR REPLACE FUNCTION vechime (Datasv_ DATE, An_ Number(4), Luna_ Number(2)) RETURN Integer AS\n  prima_zi DATE := TO_DATE('01/'||Luna_||'/'||An_, 'DD/MM/YYYY');\nBEGIN\n  RETURN TRUNC(MONTHS_BETWEEN(prima_zi, Datasv_) / 12, 0);\nEND;\n`\n\nCare dintre următoarele afirmații sunt adevărate?",
+    "question": "Fie tabelul\nANGAJAT(Marca, Numepren, Compart, Datasv, Salorar, Salorarco, Compart) cu interogarea:\n\n`sql\nSELECT marca, Numepren, Datasv, vechime(datasv, 2008, 7) FROM ANGAJAT\n`\n\nși funcția:\n\n`sql\nCREATE OR REPLACE FUNCTION vechime (Datasv_ DATE, An_ Number(4), Luna_ Number(2)) RETURN Integer AS\n  prima_zi DATE := TO_DATE('01/'||Luna_||'/'||An_, 'DD/MM/YYYY');\nBEGIN\n  RETURN TRUNC(MONTHS_BETWEEN(prima_zi, Datasv_) / 12, 0);\nEND;\n`\n\nCare dintre următoarele afirmații sunt adevărate?",
     "answers": {
       "a": "Interogarea produce o singură valoare",
       "b": "Apelul funcției nu este plasat corect în interogare",
@@ -545,7 +533,7 @@
       "d": "Schimbă culoarea de background a paginii din #EEEEEE în #FFFFFF când se trece cu mouse-ul peste tabel",
       "e": "Schimbă culoarea de background a paginii din #FFFFFF în #EEEEEE când se trece cu mouse-ul peste tabel"
     },
-    "correct": ["a"]
+    "correct": ["a", "c"]
   },
 
   {
@@ -557,7 +545,7 @@
       "d": "Creează un link către o nouă fereastră de browser",
       "e": "Niciunul dintre răspunsurile de mai sus"
     },
-    "correct": ["c"]
+    "correct": ["a", "c"]
   },
 
   {
@@ -580,7 +568,7 @@
       "d": "cu ajutorul cuvântului static",
       "e": "cu un Macro"
     },
-    "correct": ["a", "b"]
+    "correct": ["a"]
   },
   {
     "question": "10. Cum se poate trimite un formular fără ajutorul unui buton de \"Submit\"?",
@@ -594,7 +582,7 @@
     "correct": ["b", "c"]
   },
   {
-    "question": "11. De ce următorul cod nu afișează o nouă linie corect?\n\n`<?php $str = 'Hello, there.\\nHow are you?\\nThanks for visiting fyicenter'; print $str; ?>`",
+    "question": "11. De ce următorul cod nu afișează o nouă linie corect?\n`<?php $str = 'Hello, there.\\nHow are you?\\nThanks for visiting fyicenter'; print $str; ?>`",
     "answers": {
       "a": "pentru că \"\\n\" nu este interpretat ca o linie nouă",
       "b": "afișează corect linia nouă",
@@ -602,7 +590,7 @@
       "d": "lipsește directiva newLine();",
       "e": "lipsește directiva println();"
     },
-    "correct": ["a"]
+    "correct": ["a", "c"]
   },
   {
     "question": "12. Care este lungimea maximă a unui nume de tabel, de bază de date sau câmp în MySQL?",
@@ -613,7 +601,7 @@
       "d": "64 de caractere, baza de date: 64 de caractere, câmp: 63 de caractere",
       "e": "nu există limită de lungime"
     },
-    "correct": ["d"]
+    "correct": ["a"]
   },
   {
     "question": "13. Care din următoarele funcții sunt funcții de criptare în PHP?",
@@ -635,7 +623,7 @@
       "d": "afișează un dreptunghi cu textul THIS WILL DISAPPER",
       "e": "marchează textul THIS WILL DISAPPEAR"
     },
-    "correct": ["b"]
+    "correct": ["c"]
   },
   {
     "question": "15. Care dintre sintaxele următoare este corectă?",
@@ -724,7 +712,7 @@
       "d": "Scrie variabila \"therePlace\"",
       "e": "Caută un anumit cuvânt în string-ul \"Hello there\""
     },
-    "correct": ["e", "a", "b", "c", "d"]
+    "correct": ["a", "b", "c", "d", "e"]
   },
   {
     "question": "23. Înăuntrul cărui element HTML putem scrie un script JavaScript?",

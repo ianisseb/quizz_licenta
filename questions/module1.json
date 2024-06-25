@@ -192,7 +192,7 @@
   },
   {
     "question": "Ce se va afişa pe ecran în urma execuţiei următorului program?",
-    "code": "",
+    "image": "images_modul1/11.png",
     "answers": {
       "a": "1",
       "b": "7",
@@ -398,6 +398,7 @@
 
   {
     "question": "Se da urmatorul algoritm. Care vor fi valorile vectorului a dupa terminarea pasului i = 5, a = (8, 6, 4, 2, 3, 5, 7)?",
+    "image": "images_modul1/14.png",
     "answers": {
       "a": "(2, 3, 4, 5, 6, 8, 7)",
       "b": "(2, 3, 4, 5, 8, 7, 6)",
@@ -932,6 +933,7 @@
 
   {
     "question": "Se considera secventa de program. În care din următoarele situații se realizează copierea unui obiect în altul?",
+    "image": "images_modul1/13.png",
     "answers": {
       "a": "C c1(4,5)",
       "b": "C c2(0.0, 0,0)",
@@ -944,6 +946,7 @@
 
   {
     "question": "Se considera secventa de program. În care din următoarele situații se realizează copierea unui obiect?",
+    "image": "images_modul1/12.png",
     "answers": {
       "a": "Punct P1(10,20)",
       "b": "Punct P2(P1(3))",
