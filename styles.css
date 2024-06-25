@@ -5,10 +5,14 @@ body {
   flex-direction: column;
   align-items: center;
   margin: 0;
+  padding: 10px;
 }
 
 .nav-container {
   margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-btn {
@@ -20,6 +24,8 @@ body {
   cursor: pointer;
   margin: 5px;
   font-size: 16px;
+  flex: 1 1 calc(50% - 20px);
+  box-sizing: border-box;
 }
 
 .nav-btn:hover {
@@ -30,9 +36,11 @@ body {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  width: 600px;
-  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .quiz-header img {
@@ -77,4 +85,20 @@ button:hover {
 
 .incorrect {
   color: red;
+}
+
+@media (max-width: 600px) {
+  .quiz-container {
+    padding: 15px;
+  }
+
+  .nav-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 }
