@@ -136,46 +136,46 @@
     "question": "Care din urmatoarele atribuiri sunt corecte?",
     "code": "float x = 10;\nint y = 7;\nfloat t[]={3,4,1};\nfloat *q = &x;\nint *r = &y;\nvoid *p;",
     "answers": {
-      "A": "q = t;",
-      "B": "p = t;",
-      "C": "p = &y;",
-      "D": "p = r;",
-      "E": "x = &t[2];",
-      "F": "t = q;",
-      "G": "q = r;",
-      "H": "r = q;",
-      "I": "r = p;"
+      "a": "q = t;",
+      "b": "p = t;",
+      "c": "p = &y;",
+      "d": "p = r;",
+      "e": "x = &t[2];",
+      "f": "t = q;",
+      "g": "q = r;",
+      "h": "r = q;",
+      "i": "r = p;"
     },
-    "correct": ["A", "B", "C", "D"]
+    "correct": ["a", "b", "c", "d"]
   },
 
   {
     "question": "Ce se va afisa pe ecran in urma executiei urmtorului program?",
     "code": "#include <stdio.h>\nvoid main(){\nchar s[]=\"abcdef\";\nchar *p,*q,c;\np=s;\nq=p+4;\nwhile(p < q){\nc=*p;\n*p=*q;\n*q=++c;\np++;q--;\n}\nprintf(\"%s\",s);\n}",
     "answers": {
-      "A": "edccbf",
-      "B": "fedcba",
-      "C": "feddca",
-      "D": "edcbaf",
-      "E": "bcdefg",
-      "F": "nici una din variante nu este corecta"
+      "a": "edccbf",
+      "b": "fedcba",
+      "c": "feddca",
+      "d": "edcbaf",
+      "e": "bcdefg",
+      "f": "nici una din variante nu este corecta"
     },
-    "correct": ["A"]
+    "correct": ["a"]
   },
 
   {
     "question": "Care din urmatoarele linii vor genera eroare la compilare?",
     "code": "void main() {\nint a[2] = {1,2};\nint b[3] = {3};\nint* x = a;\nint* const y = a;\n// Error-prone lines:\n// 6: b = x;\n// 7: b = y;\n}",
     "answers": {
-      "A": "6, 7",
-      "B": "3, 5, 6, 7",
-      "C": "3, 4, 6, 7",
-      "D": "3, 5",
-      "E": "5, 6, 7",
-      "F": "5",
-      "G": "nici una"
+      "a": "6, 7",
+      "b": "3, 5, 6, 7",
+      "c": "3, 4, 6, 7",
+      "d": "3, 5",
+      "e": "5, 6, 7",
+      "f": "5",
+      "g": "nici una"
     },
-    "correct": "A"
+    "correct": ["a"]
   },
 
   {
@@ -188,20 +188,20 @@
       "d": "0xF006",
       "e": "0xF003"
     },
-    "correct": "a"
+    "correct": ["a"]
   },
   {
     "question": "Ce se va afişa pe ecran în urma execuţiei următorului program?",
     "code": "",
     "answers": {
-      "A": "1",
-      "B": "7",
-      "C": "2",
-      "D": "3",
-      "E": "6",
-      "F": "nimic (programul nu se compilează)"
+      "a": "1",
+      "b": "7",
+      "c": "2",
+      "d": "3",
+      "e": "6",
+      "f": "nimic (programul nu se compilează)"
     },
-    "correct": "a"
+    "correct": ["a"]
   },
 
   {
@@ -214,7 +214,7 @@
       "d": "27",
       "e": "36"
     },
-    "correct": "a"
+    "correct": ["a"]
   },
 
   {
@@ -241,33 +241,33 @@
       "d": "patru",
       "e": "toate"
     },
-    "correct": "d"
+    "correct": ["d"]
   },
 
   {
     "question": "Fie urmatorul program. In urma executiei sale sunt posibile urmatoarele situatii ",
     "code": "void main (){\\nint v[20], i, n, D;\\nscanf(\"%d\", &n);\\nfor(i=0;i<n;i++)\\nv[i]=i%2?i:-i;\\nfor(D=1,i=0;i<n;D*=v[i++]);\\nD++;\\nprintf(\"%d\",D);\\n}",
     "answers": {
-      "A": "Expresia conditionala din primul ciclu for este eronata din punct de vedere sintactic.",
-      "B": "Daca variabila n primeste la citire valoarea 6, atunci elementele vectorului v vor fi, on ordine (0,1,-2,3,-4,5).",
-      "C": "Prezenta caracterului ” ; ” dupa al doilea ciclu for constituie o eroare.",
-      "D": "Daca variabila n primeste la citire valoarea 5, atunci programul afiseaza 1.",
-      "E": "Programul funcţionează corect pentru orice valoare întreagă a lui n mai mică sau egală cu MAXINT."
+      "a": "Expresia conditionala din primul ciclu for este eronata din punct de vedere sintactic.",
+      "b": "Daca variabila n primeste la citire valoarea 6, atunci elementele vectorului v vor fi, on ordine (0,1,-2,3,-4,5).",
+      "c": "Prezenta caracterului ” ; ” dupa al doilea ciclu for constituie o eroare.",
+      "d": "Daca variabila n primeste la citire valoarea 5, atunci programul afiseaza 1.",
+      "e": "Programul funcţionează corect pentru orice valoare întreagă a lui n mai mică sau egală cu MAXINT."
     },
-    "correct": ["B", "D"]
+    "correct": ["b", "d"]
   },
 
   {
     "question": "Fie programul. In urma executiei programului sunt posibile urmatoarele situatii: ",
     "code": "void main(){\n  int v[]={0, 1, 2, 3, 4, 5, 0};\n  int i=0, n=0;\n  do {\n    if (i == v[i])\n      n++;\n  } while (i<6 && v[i++]);\n}",
     "answers": {
-      "A": "variabila n va avea valoarea 0",
-      "B": "variabila n va avea valoarea 1",
-      "C": "programul va intra într-un ciclu infinit",
-      "D": "variabila n va avea valoarea 5",
-      "E": "variabila n va avea valoarea 2"
+      "a": "variabila n va avea valoarea 0",
+      "b": "variabila n va avea valoarea 1",
+      "c": "programul va intra într-un ciclu infinit",
+      "d": "variabila n va avea valoarea 5",
+      "e": "variabila n va avea valoarea 2"
     },
-    "correct": ["B"]
+    "correct": ["b"]
   },
 
   {
@@ -299,26 +299,26 @@
     "question": "Pentru programul urmator, analizati corectitudinea afirmatiilor de mai jos:",
     "code": "#include <stdlib.h>\n#include <string.h>\n#include <stdio.h>\nvoid main(){\n  char s1[4], s2[4];\n  long x;\n  scanf(\"%s %s\", s1, s2);\n  if (strcmp(s1, s2) > 0)\n    x = atol(s1);\n  else if (strcmp(s1, s2) == 0)\n    x = 0;\n  else\n    x = atol(s2);\n  printf(\"%d\", x);\n}",
     "answers": {
-      "A": "Condiţiile din cele două linii if sunt greşite.",
-      "B": "Apelurile funcţiei atol sunt corecte.",
-      "C": "Dacă de la tastatură se introduc şirurile \"98\" şi \"123\" atunci se va afişa 98.",
-      "D": "Dacă de la tastatură se introduc şirurile \"123\" şi \"121\", atunci programul va afişa şirul \"123\".",
-      "E": "Dacă de la tastatură se introduc şirurile \"ab\" şi \"ac\", atunci se va semnala un mesaj de EROARE."
+      "a": "Condiţiile din cele două linii if sunt greşite.",
+      "b": "Apelurile funcţiei atol sunt corecte.",
+      "c": "Dacă de la tastatură se introduc şirurile \"98\" şi \"123\" atunci se va afişa 98.",
+      "d": "Dacă de la tastatură se introduc şirurile \"123\" şi \"121\", atunci programul va afişa şirul \"123\".",
+      "e": "Dacă de la tastatură se introduc şirurile \"ab\" şi \"ac\", atunci se va semnala un mesaj de EROARE."
     },
-    "correct": ["B", "C", "D"]
+    "correct": ["b", "c", "d"]
   },
 
   {
     "question": "In conformitate cu standardul ASCII, codurile literelor mari sunt succesive incepand cu 65, ce va afisa programul de mai jos?",
     "code": "#include <stdlib.h>\n#include <string.h>\n#include <stdio.h>\nvoid main(){\n  int x = 20, e;\n  char s[15] = \"ABC\", t[15], u[15];\n  e = s[1] + s[2];\n  itoa(e, t, 10);\n  strcpy(u, t);\n  strcat(s, u);\n  printf(\"%s \", s);\n}",
     "answers": {
-      "A": "Nimic, şirul s fiind vid",
-      "B": "ABC13",
-      "C": "AB13",
-      "D": "ABC133",
-      "E": "ABC131"
+      "a": "Nimic, şirul s fiind vid",
+      "b": "ABC13",
+      "c": "AB13",
+      "d": "ABC133",
+      "e": "ABC131"
     },
-    "correct": "D"
+    "correct": ["d"]
   },
 
   {
@@ -363,13 +363,13 @@
   {
     "question": "Care dintre urmatoarele afirmatii sunt adevarate?",
     "answers": {
-      "A": "Pentru a inchide un fisier se foloseste functia unlink;",
-      "B": "Pentru redenumirea unui fisier in cadrul programului se foloseste functia remove",
-      "C": "Pentru a deschide un fisier se foloseste functia fopen",
-      "D": "Nu pot fi adaugate informatii intr-un fisier",
-      "E": "Toate celelalte variante sunt eronate"
+      "a": "Pentru a inchide un fisier se foloseste functia unlink;",
+      "b": "Pentru redenumirea unui fisier in cadrul programului se foloseste functia remove",
+      "c": "Pentru a deschide un fisier se foloseste functia fopen",
+      "d": "Nu pot fi adaugate informatii intr-un fisier",
+      "e": "Toate celelalte variante sunt eronate"
     },
-    "correct": ["C"]
+    "correct": ["c"]
   },
 
   {
@@ -381,7 +381,7 @@
       "c": "11\n17\n5",
       "d": "11\n17\n5\n23\n11"
     },
-    "correct": "c"
+    "correct": ["c"]
   },
 
   {
@@ -405,7 +405,7 @@
       "d": "(8, 7, 6, 5, 4, 2, 3)",
       "e": "(2, 3, 4, 5, 6, 7, 8)"
     },
-    "correct": "a"
+    "correct": ["a"]
   },
 
   {
@@ -431,7 +431,7 @@
       "d": "3, 6, 5, 7, 10, 12, 13, 15, 16, 18, 20, 23",
       "e": "3, 5, 6, 7, 10, 12, 13, 16, 15, 18, 20, 23"
     },
-    "correct": "c"
+    "correct": ["c"]
   },
 
   {
@@ -444,7 +444,7 @@
       "d": "3, 6, 5, 7, 10, 12, 13, 15, 16, 18, 20, 23",
       "e": "3, 5, 6, 7, 10, 12, 13, 16, 15, 18, 20, 23"
     },
-    "correct": "b"
+    "correct": ["b"]
   },
 
   {
@@ -473,13 +473,13 @@
     "question": "Ce se va afişa pe ecran în urma execuţiei următorului program?",
     "code": "String name;\nint i;\nboolean startWord;\nname = \"Franklin D. Roosevelt\";\nstartWord = true;\nfor (i = 0; i < name.length(); i++) {\n  if (startWord)\n    System.out.println(name.charAt(i));\n  if (name.charAt(i) == ' ')\n    startWord = true;\n  else\n    startWord = false;\n}",
     "answers": {
-      "A": "FDR",
-      "B": "Franklin",
-      "C": "D",
-      "D": "Roosevelt",
-      "E": "Franklin D. Roosevelt"
+      "a": "FDR",
+      "b": "Franklin",
+      "c": "D",
+      "d": "Roosevelt",
+      "e": "Franklin D. Roosevelt"
     },
-    "correct": ["A"]
+    "correct": ["a"]
   },
 
   {
@@ -492,7 +492,7 @@
       "d": "3, 6, 5, 7, 10, 12, 13, 15, 16, 18, 20, 23",
       "e": "3, 5, 6, 7, 10, 12, 13, 16, 15, 18, 20, 23"
     },
-    "correct": "a"
+    "correct": ["a"]
   },
 
   {
@@ -536,27 +536,27 @@
   {
     "question": "Coloana din stanga reprezinta un input de stringuri ce trebuie sortate; coloana din dreapta reprezinta strigurile sortate; celelalte coloane reprezinta un pas intermediar al unuia dintre algoritmii: quicksort, mergesort top-down, merge sort botton-up, heapsort. Care este ordinea algoritmilor tinand cont de coloanele afisate?",
     "answers": {
-      "A": "Input, quicksort, heapsort, merge bottom-up, merge top-down, output",
-      "B": "Input, heapsort, merge top-down, merge bottom-up, quicksort, output",
-      "C": "Input, quicksort, heapsort, merge top-down, merge bottom-up, output",
-      "D": "Input, merge top-down, merge bottom-up, quicksort, heapsort, output",
-      "E": "Input, merge top-down, quicksort, heapsort, merge bottom-up, output"
+      "a": "Input, quicksort, heapsort, merge bottom-up, merge top-down, output",
+      "b": "Input, heapsort, merge top-down, merge bottom-up, quicksort, output",
+      "c": "Input, quicksort, heapsort, merge top-down, merge bottom-up, output",
+      "d": "Input, merge top-down, merge bottom-up, quicksort, heapsort, output",
+      "e": "Input, merge top-down, quicksort, heapsort, merge bottom-up, output"
     },
-    "correct": ["A"]
+    "correct": ["a"]
   },
 
   {
     "question": "Analizând algoritmul de mai jos, precizați ce timp de execuție are.",
     "code": "public static int f1(int N){\n  int x = 0;\n  for (int i = 0; i < N; i++)\n    x++;\n  return x;\n}",
     "answers": {
-      "A": "logN",
-      "B": "N",
-      "C": "NlogN",
-      "D": "N2",
-      "E": "2N",
-      "F": "N!"
+      "a": "logN",
+      "b": "N",
+      "c": "NlogN",
+      "d": "N2",
+      "e": "2N",
+      "f": "N!"
     },
-    "correct": "B"
+    "correct": ["b"]
   },
 
   {
@@ -577,14 +577,14 @@
     "question": "Analizând algoritmul de mai jos, precizați ce timp de execuție are.",
     "code": "public static int f3(int N){\nif (N==0) return 1;\nint x=0;\nfor (int i = 0; i < N; i++)\nx+=f3(N-1);\nreturn x;\n}",
     "answers": {
-      "A": "logN",
-      "B": "N",
-      "C": "NlogN",
-      "D": "N2",
-      "E": "2^N",
-      "F": "N!"
+      "a": "logN",
+      "b": "N",
+      "c": "NlogN",
+      "d": "N2",
+      "e": "2^N",
+      "f": "N!"
     },
-    "correct": ["F"]
+    "correct": ["f"]
   },
 
   {
@@ -612,7 +612,7 @@
       "e": "2^N",
       "f": "N!"
     },
-    "correct": "b"
+    "correct": ["b"]
   },
 
   {
@@ -681,26 +681,26 @@
   {
     "question": "Obiectele apartinand unei aceleiasi clase se diferentiaza prin:",
     "answers": {
-      "A": "starea lor",
-      "B": "valorile datelor membru declarate in cadrul clasei",
-      "C": "valorile caracteristicilor clasei",
-      "D": "caracteristicile diferite specifice fiec˘arui obiect",
-      "E": "comportamentul diferit specific fiec˘arui obiect"
+      "a": "starea lor",
+      "b": "valorile datelor membru declarate in cadrul clasei",
+      "c": "valorile caracteristicilor clasei",
+      "d": "caracteristicile diferite specifice fiec˘arui obiect",
+      "e": "comportamentul diferit specific fiec˘arui obiect"
     },
-    "correct": ["A", "B", "C"]
+    "correct": ["a", "b", "c"]
   },
 
   {
     "question": "Considerand urmatorul program C++, care din urmatoarele afirmatii sunt adevarate?",
     "code": "#include <iostream>\nusing namespace std;\nclass C\n{\nprivate:\n  int _i;\npublic:\n  C(int i): _i(i) {}\n  C(): _i(3) {}\n  ~C() { cout << _i << endl; }\n};\nvoid main()\n{\n  C c1(4);\n  C c2;\n}",
     "answers": {
-      "A": "programul nu contine erori de sintaxa",
-      "B": "există erori de sintaxa în definițiile metodelor constructor",
-      "C": "destructorul nu poate conține instrucțiuni de afișare",
-      "D": "în cadrul programului principal sunt create două instanțe ale clasei C",
-      "E": "programul afișează la consolă numerele 3 și 4"
+      "a": "programul nu contine erori de sintaxa",
+      "b": "există erori de sintaxa în definițiile metodelor constructor",
+      "c": "destructorul nu poate conține instrucțiuni de afișare",
+      "d": "în cadrul programului principal sunt create două instanțe ale clasei C",
+      "e": "programul afișează la consolă numerele 3 și 4"
     },
-    "correct": ["A", "D", "E"]
+    "correct": ["a", "d", "e"]
   },
 
   {
@@ -725,7 +725,7 @@
       "d": "3 7 10 1",
       "e": "Eroare de compilare deoarece constructorul nu conţine nicio instrucţiune"
     },
-    "correct": "a"
+    "correct": ["a"]
   },
 
   {
@@ -812,15 +812,15 @@
     "question": "Ce se va afişa pe ecran în urma execuţiei următorului program?",
     "code": "#include <iostream.h>\nclass B {\nprotected:\nint x;\npublic:\nB(int x=0){this->x=x;}\nvirtual void f() {x=x+1;}\nvoid print(){cout<<x<<\" \";}\n};\nclass D1: public B{\npublic:\nvoid f() {x=x+5;}\n};\nclass D2: public B{\npublic:\nvoid f() {x=x+2;}\n};\nvoid main(){\n\nint i;\nB *b[] = { new B(2), new D1(), new D2(), new B};\nfor (i=3;i>0;i--) (*b[i]).f();\nfor (i=0;i<=3;i++) b[i]->print();\n}",
     "answers": {
-      "A": "2 5 2 1",
-      "B": "2 0 0 0",
-      "C": "3 5 2 1",
-      "D": "2 1 1 1",
-      "E": "2 5 2 0",
-      "F": "2 5 2",
-      "G": "Eroare de compilare"
+      "a": "2 5 2 1",
+      "b": "2 0 0 0",
+      "c": "3 5 2 1",
+      "d": "2 1 1 1",
+      "e": "2 5 2 0",
+      "f": "2 5 2",
+      "g": "Eroare de compilare"
     },
-    "correct": ["A"]
+    "correct": ["a"]
   },
 
   {
@@ -875,7 +875,7 @@
       "d": "3.14",
       "e": "depinde de implementarea compilatorului"
     },
-    "correct": "a"
+    "correct": ["a"]
   },
 
   {
@@ -908,13 +908,13 @@
     "question": "Fie secventa de program. Care din urmatoarele afirmatii sunt adevarate:",
     "code": "#include <iostream>\nclass A {\nprivate:\n  int x, y;\npublic:\n  A() { x = 0; y = 0; }\n  A(int xi, int yi) {\n    x = xi; y = yi;\n  }\n  void afis() {\n    std::cout << x << \" \" << y;\n  }\n};\n\nvoid main() {\n  A A1, A2(10, 20);\n  A1.afis();\n  A2.afis();\n}",
     "answers": {
-      "A": "Metoda afis() este incorect definită",
-      "B": "Constructorul este incorect definit",
-      "C": "Declaratie incorectă pentru obiectul A1",
-      "D": "Programul afișează valorile (10 20 0 0)",
-      "E": "Programul afișează valorile (0 0 10 20)"
+      "a": "Metoda afis() este incorect definită",
+      "b": "Constructorul este incorect definit",
+      "c": "Declaratie incorectă pentru obiectul A1",
+      "d": "Programul afișează valorile (10 20 0 0)",
+      "e": "Programul afișează valorile (0 0 10 20)"
     },
-    "correct": ["E"]
+    "correct": ["e"]
   },
 
   {
@@ -971,13 +971,13 @@
     "question": "Se da programul. Care din afirmatiile urmatoare sunt corecte?",
     "code": "class A {\nint x,y;\npublic:\nA(int xi = 0, int yi=0){\nx=xi;y=yi;\n}\nvoid afis(){\ncout <<\" x\" << y;\n}\nA operator+ (A o2);\nfriend A operator++ (A &a);\n};\nA A::operator+ (A o2){\nA temp;\ntemp.x=x+o2.x;\ntemp.y=y+o2.y;\nreturn temp;\n}\nA operator++ (A &a){\n++a.x;++a.y;\nreturn a;\n}\nvoid main(){\nA a1(20,30),a2(2,2),a3;\na3=++a1+a2;\na3.afis();\n}",
     "answers": {
-      "A": "Utilizarea cuvantului predefinit 'friend' nu este permisa in acest context",
-      "B": "Functia operatorului ++ nu este definita corect",
-      "C": "Programul va afisa valorile: 23 33",
-      "D": "Atribuirea a3=++a1+a2 este incorecta",
-      "E": "Programul va afisa valorile: 22 32"
+      "a": "Utilizarea cuvantului predefinit 'friend' nu este permisa in acest context",
+      "b": "Functia operatorului ++ nu este definita corect",
+      "c": "Programul va afisa valorile: 23 33",
+      "d": "Atribuirea a3=++a1+a2 este incorecta",
+      "e": "Programul va afisa valorile: 22 32"
     },
-    "correct": ["C"]
+    "correct": ["c"]
   },
 
   {
@@ -993,19 +993,6 @@
   },
 
   {
-    "question": "Ce se poate afirma despre operator[]()?",
-    "code": "class A {\n    int a[3];\npublic:\n    A(int xi, int yi, int zi) {\n        a[0] = xi; a[1] = yi; a[2] = zi;\n    }\n    int &operator[](int i) {\n        return a[i];\n    }\n};\n\nvoid main() {\n    A o(1, 2, 3);\n    cout << o[0];\n    o[1] = 10;\n    cout << o[1];\n}",
-    "answers": {
-      "a": "Supraincarca operatorul[]",
-      "b": "Supraincarca un operator unar",
-      "c": "Este o metoda oarecare a clasei care nu produce supraincarcarea unor operatori",
-      "d": "Este un constructor",
-      "e": "Supraincarca operatorul()"
-    },
-    "correct": "e"
-  },
-
-  {
     "question": "Se considera secventa. Ce se poate afirma despre operator[]()?",
     "code": "class A {\\nint a[3];\\npublic:\\nA(int xi, int yi, int zi ){\\na[0]=xi;a[1]=yi;a[2]=zi;\\n}\\nint &operator[](int i){\\nreturn a[i];\\n}\\n};\\nvoid main() {\\nA o(1, 2, 3);\\ncout<<o[0];\\no[1]=10;\\ncout<<o[1];\\n}",
     "answers": {
@@ -1015,7 +1002,7 @@
       "d": "Este un constructor",
       "e": "Supraîncarcă un operator unar"
     },
-    "correct": "e"
+    "correct": ["e"]
   },
 
   {
@@ -1040,7 +1027,7 @@
       "c": "Numai (5)",
       "d": "(2), (4) și (5)"
     },
-    "correct": ["d"]
+    "correct": ["b"]
   },
 
   {
@@ -1052,7 +1039,7 @@
       "c": "Toate",
       "d": "(6)"
     },
-    "correct": ["a"]
+    "correct": ["d"]
   },
   {
     "question": "Fie următoarea declarație Java:\n\npublic private int h;\n\nCare afirmații sunt adevărate?",
@@ -1122,7 +1109,7 @@
       "c": "Va apărea eroare la compilare deoarece în clasa C2 s-a suprascris greșit atributul x din clasa C1;",
       "d": "Va apărea eroare la compilare deoarece metoda suprascrisă f() din clasa C2 întoarce un tip diferit de void;"
     },
-    "correct": ["b"]
+    "correct": ["d"]
   },
   {
     "question": "Ce puteți spune despre următorul program Java?\n\npublic class Test{\n\npublic static void main(String []args){\n\nC1 obiect =new C1();\n\nobiect.f(4,3);\n\n}\n\n}\n\nclass C1{\n\npublic void f(int xx, final int yy){\n\nint a=xx+yy;\n\nfinal int b=xx-yy;\n\nclass C2{\n\npublic void g(){\n\nSystem.out.print(\"a= \"+a);\n\nSystem.out.print(\", b= \"+b);\n\n}\n\n}\n\nC2 obiect2 = new C2();\n\nobiect2.g();\n\n}\n\n}\n\nA. Programul este corect și va afișa la execuție a=4, b=3;\n\nB. Va apărea eroare la compilare, deoarece clasa C2 nu poate fi definită în metoda f() din clasa C1;\n\nC. Va apărea eroare la compilare deoarece în metoda g() nu putem accesa variabila locală a din metoda f();\n\nD. Va apărea eroare la compilare deoarece nu se creează în clasa Test un obiect de tip C1.C2;",
@@ -1132,7 +1119,7 @@
       "c": "Va apărea eroare la compilare deoarece în metoda g() nu putem accesa variabila locală a din metoda f();",
       "d": "Va apărea eroare la compilare deoarece nu se creează în clasa Test un obiect de tip C1.C2;"
     },
-    "correct": ["a"]
+    "correct": ["c"]
   },
   {
     "question": "Un fir de execuție poate intra în starea ”blocat” (blocked) astfel?",
@@ -1142,7 +1129,7 @@
       "c": "Prin apelul metodei block();",
       "d": "Prin apelul metodei wait();"
     },
-    "correct": ["d"]
+    "correct": ["a", "d"]
   },
   {
     "question": "Care dintre următoarele propoziții referitoare la metodele unui applet sunt adevărate?",
@@ -1152,7 +1139,7 @@
       "c": "Pot fi apelate direct de către utilizator;",
       "d": "Nu se pot declara noi metode;"
     },
-    "correct": ["b"]
+    "correct": ["b", "c"]
   },
   {
     "question": "Care dintre gestionarii de poziționare (Layout Managers) de mai jos pot fi utilizați pentru appleturi?",
@@ -1182,7 +1169,7 @@
       "c": "În sistemele de operare Unix componentele AWT nu sunt vizibile, pe când cele din Swing da;",
       "d": "Fiecare componentă AWT are o componentă corespondentă în Swing;"
     },
-    "correct": ["a", "b", "d"]
+    "correct": ["a", "b"]
   },
   {
     "question": "Care din fragmentele de cod Java de mai jos adaugă un buton unui container de baza JFrame?",
@@ -1192,7 +1179,7 @@
       "c": "JFrame f= new JFrame();\n\nf. add(new JButton(\"Buton\"));",
       "d": "JFrame f=new JFrame();\n\nJButton b=new JButton(\"Buton\");\n\nf.add(b);"
     },
-    "correct": ["b"]
+    "correct": ["a", "b"]
   },
   {
     "question": "Fie urmatoarea secvență de cod:\n\nJPanel p =new JPanel();\n\nJlabel e = new JLabel(\"Eticheta:\");\n\ne.setDisplayedMnemonic('E');\n\np.add(e, BorderLayout.EAST);\n\nJTextField t = new JTextField(7);\n\ne.setLabelFor(t);\n\np.add(t, BorderLayout.WEST);\n\nCe se va întâmpla la apăsarea combinației de taste: Alt + E?",
@@ -1222,7 +1209,7 @@
       "c": "Subclasă pentru JInternalFrame;",
       "d": "Componentă atomică simplă;"
     },
-    "correct": ["a"]
+    "correct": ["a", "b"]
   },
   {
     "question": "Fie următorul program Java:\n\npublic class Afisare {\n\npublic static void main (String[] args) {\n\nfor (int i = 0; i < args.length; i++)\n\nSystem.out.println(args[i]);\n\n}\n\n}\n\nUn apel de genul java Afisare \"Hello Java\"; va produce următorul rezultat:",
@@ -1232,7 +1219,7 @@
       "c": "Programul este incorect, deoarece nu sunt prezente argumentele;",
       "d": "NaN;"
     },
-    "correct": ["b"]
+    "correct": ["a"]
   },
   {
     "question": "Fie următorul program Java:\n\npublic class Program{\n\nstatic void f(int k){\n\nswitch(k){\n\ndefault: System.out.print(\"i \"); break;\n\ncase 1: System.out.print(\"1 \"); break;\n\ncase 2: case 3: System.out.print(\"21 \"); break;\n\ncase 4: case 5: System.out.print(\"26 \");\n\n}\n\n}\n\npublic static void main(String []args){\n\nfor(int i=0;i<6;i++)\n\nf(i);\n\n}\n\n}\n\nCare afirmații sunt false?",
@@ -1242,7 +1229,7 @@
       "c": "Programul se compilează și la execuție afișează\n\ni 1 21 26 ;",
       "d": "Programul se compilează și la execuție afișează\n\ni 1 21 21 26 26 i;"
     },
-    "correct": ["c"]
+    "correct": ["a", "d", "d"]
   },
   {
     "question": "Se utilizează protected în Java pentru date și metode la care nu este necesar:",
@@ -1292,7 +1279,7 @@
       "c": "Prin apelul metodei join();",
       "d": "Niciodată;"
     },
-    "correct": ["c"]
+    "correct": ["b"]
   },
   {
     "question": "Când browser-ul întâlnește tag-ul < APPLET >, rezervă o zonă pentru afișare cu dimensiunile specificate de parametrii WIDTH, HEIGHT și:",
@@ -1312,7 +1299,7 @@
       "c": "jar cfv arhiva.jar *.class *.jpg *.au;",
       "d": "jar cvf arhiva.jar ClasaPrincipala.class AltaClasa.class imagine.jpg sunet.au"
     },
-    "correct": ["a"]
+    "correct": ["a", "c", "d"]
   },
   {
     "question": "În care din exemplele de mai jos se folosește corect variabila iLocation?",
@@ -1322,7 +1309,7 @@
       "c": "tabbedPanel.removeTabAt( iLocation );",
       "d": "JFrame f=new JFrame();\n\nJButton b=new JButton(\"Buton\");\n\nf.add(b, iLocation);"
     },
-    "correct": ["c"]
+    "correct": ["a", "c"]
   },
   {
     "question": "Ce rezultă din următorul fragment de cod Java?\n\nint x=1;\n\nString []names={\"Fred\",\"Jim\",\"Sheila\"};\n\nnames[--x]+=\".\";\n\nfor(int i=0;i<names.length;i++)\n\nSystem.out.println(names[i]);",
@@ -1364,7 +1351,7 @@
       "d": "D E B F C A",
       "e": "D E F B C A"
     },
-    "correct": ["e"]
+    "correct": ["d"]
   },
   {
     "question": "O procedură ce parcurge arborele binar în preordine va afişa:",
@@ -1411,18 +1398,18 @@
       "d": "15",
       "e": "18"
     },
-    "correct": ["a"]
+    "correct": ["d"]
   },
   {
     "question": "Câte grafuri neorientate, distincte, cu 4 vârfuri se pot construi? Două grafuri se consideră distincte dacă matricile lor de adiacență sunt diferite.",
     "answers": {
-      "a": "46",
-      "b": "26",
-      "c": "64",
+      "a": "4^6",
+      "b": "2^6",
+      "c": "6^4",
       "d": "4",
-      "e": "210"
+      "e": "2^10"
     },
-    "correct": ["c"]
+    "correct": ["b"]
   },
   {
     "question": "Într-un graf neorientat cu 10 muchii, fiecare nod are gradul un număr nenul. Doar trei dintre noduri au gradul un număr par, restul nodurilor având gradele numere impare. Care este numărul maxim de noduri pe care poate să le aibă graful?",
@@ -1433,7 +1420,7 @@
       "d": "16",
       "e": "19"
     },
-    "correct": ["b"]
+    "correct": ["c"]
   },
   {
     "question": "Determinați numărul de frunze ale arborelui cu rădăcină descris prin următorul vector tată: (6, 5, 5, 2, 0, 3, 3, 3, 8, 7, 7)?",
@@ -1499,7 +1486,7 @@
       "d": "4",
       "e": "5"
     },
-    "correct": ["d"]
+    "correct": ["e"]
   },
   {
     "question": "Pentru care dintre următorii arbori cu rădăcină, fiecare având 9 noduri, numerotate de la 1 la 9, memorați cu ajutorul vectorilor tată, nodul 3 are cei mai mulți descendenți?",
@@ -1510,7 +1497,7 @@
       "d": "(0, 1, 1, 3, 4, 3, 4, 4, 3)",
       "e": "(0, 1, 2, 3, 4, 5, 6, 7, 8)"
     },
-    "correct": ["a"]
+    "correct": ["c"]
   },
   {
     "question": "Care dintre următoarele proprietăți este adevărată pentru un graf orientat cu n vârfuri și n arce (n > 3) și care prezintă un circuit de lungime n:",
@@ -1533,7 +1520,7 @@
       "d": "5, 2, 7, 1, 6, 3, 4, 8",
       "e": "5, 7, 2, 6, 1, 8, 4, 3"
     },
-    "correct": ["a"]
+    "correct": ["d"]
   },
   {
     "question": "Care este ordinea de parcurgere a nodurilor grafului din figura 2, dacă se folosește metoda de vizitare în adâncime (DFS) pornind din nodul 3?",
@@ -1568,7 +1555,7 @@
       "d": "(N + 1)/2",
       "e": "N"
     },
-    "correct": ["a"]
+    "correct": ["e"]
   },
   {
     "question": "Dacă avem un arbore binar plin cu 9 nivele, să se determine numărul de vârfuri ce se află pe nivelul cu numărul 5?",
@@ -1576,10 +1563,10 @@
       "a": "15",
       "b": "31",
       "c": "25",
-      "d": "24",
+      "d": "2^4",
       "e": "14"
     },
-    "correct": ["a"]
+    "correct": ["d"]
   },
   {
     "question": "Având un arbore binar reprezentat prin următoarea expresie cu paranteze: 1(2(3(0, 4(0, 0)), 5(6(0, 0), 7(0, 0))), 8(0, 9(0, 0))). Să se determine numărul de frunze ale grafului.",
@@ -1590,7 +1577,7 @@
       "d": "9",
       "e": "6"
     },
-    "correct": ["c"]
+    "correct": ["a"]
   },
   {
     "question": "Având graful ponderat din figura 4, să se determine un arbore de acoperire de cost minim. Vom considera nodul A ca nod de plecare. Care este ordinea de parcurgere a nodurilor?",
@@ -1602,7 +1589,7 @@
       "d": "A, B, D, C, E",
       "e": "A, B, E, B, D"
     },
-    "correct": ["a"]
+    "correct": ["b"]
   },
   {
     "question": "Care este expresia timpului de execuţie T (n) al următorului algoritm ı̂n cazul cel mai favorabil, ı̂n cazul mediu şi ı̂n cazul cel mai defavorabil, unde n notează dimensiunea setului de intrare, iar k, k1, . . . , k8 - orice constantă pozitivă:\n\nprocedure algoritm(v, n)\nfor i← 2, n do\nkey ← v[i]\nj ← i− 1\nwhile (j > 0) and (v[j] > key) do\nv[j + 1]← v[j]\nj ← j − 1\nend while\nv[j]← key\nend for\nend procedure",
@@ -1632,7 +1619,7 @@
       "b": "f(n) ∈ Θ(g(n))",
       "c": "f(n) ∈ Ω(g(n))"
     },
-    "correct": ["a"]
+    "correct": ["a", "c"]
   },
   {
     "question": "Pentru f(n) ∈ Θ(n) şi g(n) ∈ Ω(n) atunci",
@@ -1650,7 +1637,7 @@
       "b": "f(n), g(n) ∈ O(n^3)",
       "c": "f(n) ∈ O(6n^3) şi g(n) ∈ O(2n^3)"
     },
-    "correct": ["b"]
+    "correct": ["a", "b", "c"]
   },
   {
     "question": "Pentru f(n) ∈ Ω(n) şi g(n) ∈ O(n^2) atunci",
@@ -1677,7 +1664,7 @@
       "b": "f(n) ∈ O(n^2)",
       "c": "f(n) ∈ Θ(n^2)"
     },
-    "correct": ["c"]
+    "correct": ["b", "c"]
   },
   {
     "question": "Care este ordinul de complexitate al algoritmului de căutare binară?\n\nprocedure binsearch(start, finish)\nif start=finish then\nreturn start\nend if\nmij ← (start+ finish+ 1)/2\nif x ≤ v[mij] then\nbinsearch(start, mij)\nelse\nbinsearch(mij+1, finish)\nend if\nend procedure",
@@ -1686,7 +1673,7 @@
       "b": "O(log n)",
       "c": "O(n)"
     },
-    "correct": ["b"]
+    "correct": ["a", "b"]
   },
   {
     "question": "Care este ordinul de complexitate al algoritmului de ridicare la putere al unui număr xn?",
@@ -1695,7 +1682,7 @@
       "b": "Θ(log n)",
       "c": "Θ(xn)"
     },
-    "correct": ["b"]
+    "correct": ["a", "b"]
   },
   {
     "question": "Care este ordinul de complexitate al funcţiei f(n) cu relaţia de recurenţă t(n) = 2t(√n) + log n?",
@@ -1713,7 +1700,7 @@
       "b": "f(n) ∈ Θ(n^2)",
       "c": "f(n) ∈ O(n)"
     },
-    "correct": ["b"]
+    "correct": ["a", "b"]
   },
   {
     "question": "Care este ordinul de creştere al unui algoritm având timpul de execuţie de forma următoare:\n\nt(n) =\n{\nt(n/2), n > 1\n1, n = 1",
@@ -1722,7 +1709,7 @@
       "b": "f(n) ∈ O(log n)",
       "c": "f(n) ∈ O(lg n)"
     },
-    "correct": ["c"]
+    "correct": ["a", "b", "c"]
   },
   {
     "question": "Care este ordinul de creştere al algoritmului pentru problema Turnurilor din Hanoi având timpul de execuţie de forma\n\nt(n) =\n{\n2t(n− 1) + 1, n > 1\n1, n = 1",
@@ -1740,7 +1727,7 @@
       "b": "f(n) ∈ O(2logn)",
       "c": "f(n) ∈ O(log n)"
     },
-    "correct": ["b"]
+    "correct": ["a", "b"]
   },
   {
     "question": "Care este ordinul de complexitate al algoritmului mergesort având relaţia de recurenţă t(n) = 2t(n/2) + Θ(n)?",
@@ -1749,7 +1736,7 @@
       "b": "f(n) ∈ Θ(n)",
       "c": "f(n) ∈ Θ(n+ n log n)"
     },
-    "correct": ["a"]
+    "correct": ["a", "c"]
   },
   {
     "question": "Să se indice ordinul de creştere al funcţiei f(n) cu următoarea relaţie de recurenţă:\n\nt(n) =\n{\nt(n− 1) + 1, n > 0\n0, n = 0",
@@ -1776,7 +1763,7 @@
       "b": "f(n) ∈ Θ(n+ n log n)",
       "c": "f(n) ∈ Θ(n log n)"
     },
-    "correct": ["c"]
+    "correct": ["b", "c"]
   },
   {
     "question": "Care din următoarele interpretări fac adevărată formula F ilustrată ı̂n graficul din Figura 5?",
@@ -1786,6 +1773,6 @@
       "b": "x1 = false, x2 = true, x3 = false",
       "c": "x1 = true, x2 = false, x3 = true"
     },
-    "correct": ["a"]
+    "correct": ["b"]
   }
 ]

@@ -104,6 +104,7 @@ function loadQuiz() {
   enableSubmitButton();
 
   const currentQuizData = quizData[currentQuiz];
+  console.log(`Loading question ${currentQuiz + 1}:`, currentQuizData);
 
   questionEl.innerText = currentQuizData.question;
 
