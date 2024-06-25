@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="nav-container">
+      <button class="nav-btn" id="module1-btn">Module 1</button>
+      <button class="nav-btn" id="module2-btn">Module 2</button>
+      <button class="nav-btn" id="module3-btn">Module 3</button>
+      <button class="nav-btn" id="random-quiz-btn">Start Random Quiz</button>
+    </div>
+    <div class="quiz-container" id="quiz">
+      <div class="quiz-header">
+        <div id="quiz-info">
+          <span id="question-count">Question 0/0</span>
+          <span id="timer">Time: 0</span>
+        </div>
+        <h2 id="question">Question text</h2>
+        <img id="question-image" src="" alt="Question Image" />
+        <ul id="answer-list">
+          <!-- Answers will be dynamically added here -->
+        </ul>
+      </div>
+      <button id="submit">Submit</button>
+    </div>
+    <div id="results" class="results-container" style="display: none">
+      <h2>Your Results</h2>
+      <ul id="results-list">
+        <!-- Results will be dynamically added here -->
+      </ul>
+      <button onclick="location.reload()">Reload</button>
+      <button onclick="selectModule('module1')">Module 1</button>
+      <button onclick="selectModule('module2')">Module 2</button>
+      <button onclick="selectModule('module3')">Module 3</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
