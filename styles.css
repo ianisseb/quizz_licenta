@@ -58,6 +58,9 @@ ul {
 li {
   margin-bottom: 15px;
   text-align: left;
+  background-color: lightblue;
+  padding: 5px;
+  border-radius: 3px;
 }
 
 input[type="checkbox"] {
@@ -115,4 +118,14 @@ button:hover {
     padding: 8px 10px;
     margin-top: 10px;
   }
+}
+
+#question {
+  font-size: 16px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: white; /* Background color for the questions */
 }
