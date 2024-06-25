@@ -88,17 +88,31 @@ button:hover {
 }
 
 @media (max-width: 600px) {
+  body {
+    padding: 5px;
+  }
+
   .quiz-container {
-    padding: 15px;
+    padding: 10px;
   }
 
   .nav-btn {
     font-size: 14px;
-    padding: 8px 16px;
+    padding: 8px 10px;
+  }
+
+  .quiz-header h2 {
+    font-size: 18px;
+  }
+
+  li {
+    font-size: 14px;
+    margin-bottom: 10px;
   }
 
   button {
     font-size: 14px;
-    padding: 8px 16px;
+    padding: 8px 10px;
+    margin-top: 10px;
   }
 }
