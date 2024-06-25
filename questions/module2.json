@@ -1,0 +1,1125 @@
+[
+  {
+    "question": "Exprimaţi ı̂n binar, octal, hexazecimal numărul zecimal 3.62510.",
+    "answers": {
+      "a": "11.2000; 3.42; 4.20",
+      "b": "11.101; 3.5; 3.A",
+      "c": "2.1001; 3.52; 2D",
+      "d": "11.10000; 3.20; 3.2A",
+      "e": "11.10000; 2.42; 3.2"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Convertiţi ı̂n zecimal numerele următoare (baza este indicată ı̂n indice): DA.C16, 27.48, 11011.1012.",
+    "answers": {
+      "a": "216.5; 17.5; 27.52",
+      "b": "218.75; 23.5; 27.625",
+      "c": "218.75; 22.5; 26.5",
+      "d": "218.5; 23.5; 27.6",
+      "e": "218.75; 23.55; 27.625"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Daţi valoarea zecimală cu semn a numărului B716 codificat ı̂n complement faţă de 1 (cod invers)",
+    "answers": {
+      "a": "+7.2",
+      "b": "71",
+      "c": "72",
+      "d": "-71",
+      "e": "-72"
+    },
+    "correct": ["e"]
+  },
+  {
+    "question": "Daţi pe 8 biţi (̂ın hexazecimal) reprezentarea ı̂n complement faţă de 2 (cod complementar) a valorii ı̂ntregi negative -32.",
+    "answers": {
+      "a": "E3",
+      "b": "E0",
+      "c": "E1",
+      "d": "E2",
+      "e": "DF"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Daţi sub forma a× 2b (a şi b ı̂n sistemul zecimal) valoarea care corespunde reprezentării ı̂n VMSP (virgulă mobilă simplă precizie, adică: 1 bit = semnul mantisei, 8 biţi = exponentul decalat, 23 biţi = mantisa normalizată), 276600000008.",
+    "answers": {
+      "a": "0.8× 24",
+      "b": "−0.5× 2−3",
+      "c": "−8.8× 24",
+      "d": "−8.8125× 2−4",
+      "e": "−100"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Daţi reprezentarea internă, exprimată ı̂n hexazecimal), ı̂n VMSP (virgulă mobilă simplă precizie, adică: 1 bit = semnul mantisei, 8 biţi = exponentul decalat, 23 biţi = mantisa normalizată) pentru valoarea zecimală −6.25.",
+    "answers": {
+      "a": "44C58000",
+      "b": "C1E40000",
+      "c": "C4B59000",
+      "d": "C4C58000",
+      "e": "CDFAA000"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Fie o transmisie care utilizează codul lui Hamming cu paritate pară. Găsiţi mesajul transmis (̂ın octal) ştiind că reprezentarea datelor de transmis (pe 16 biţi) este 7B16.",
+    "answers": {
+      "a": "3724",
+      "b": "3723",
+      "c": "3726",
+      "d": "3725",
+      "e": "3727"
+    },
+    "correct": ["d"]
+  },
+  {
+    "question": "Fie o transmisie care utilizează codul lui Hamming cu paritate impară. Regăsiţi (̂ın octal) mesajul iniţial (corectând eventualele erori dacă mesajul primit (pe 21 biţi) este 6130014 (̂ın octal).",
+    "answers": {
+      "a": "1404418",
+      "b": "1414418",
+      "c": "1424428",
+      "d": "C52216",
+      "e": "C32116"
+    },
+    "correct": ["b", "e"]
+  },
+  {
+    "question": "Fie o transmisie care utilizează metoda codurilor polinomiale (CRC) prin intermediul polinomului generator G(x) = x3 + x+1. Dacă se doreşte transmiterea datelor (7 biţi) cu reprezentarea octală 131, care va fi mesajul trimis?",
+    "answers": {
+      "a": "25DC16",
+      "b": "13138",
+      "c": "2CB16",
+      "d": "227348",
+      "e": "2273510"
+    },
+    "correct": ["b", "c"]
+  },
+  {
+    "question": "Fie o transmisie care utilizează metoda codurilor polinomiale (CRC) prin intermediul polinomului generator G(x) = x2 + x + 1. Dacă s-a recepţionat mesajul T = 23328 (11 biţi) să se stabilească dacă a fost trimis corect, iar dacă răspunsul este afirmativ să se afle mesajul M iniţial.",
+    "answers": {
+      "a": "13210",
+      "b": "4648",
+      "c": "13416",
+      "d": "13616",
+      "e": "4668"
+    },
+    "correct": ["d", "e"]
+  },
+  {
+    "question": "Reduceţi expresia formei normale disjunctive (cu mintermeni) a funcţiei logice f(a, b, c) = ābc + ab̄c+ ab̄c̄+ abc̄+ abc",
+    "answers": {
+      "a": "ā+ bc",
+      "b": "a+ bc",
+      "c": "a+ b̄c",
+      "d": "ā+ b",
+      "e": "a+ b̄"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Reduceţi expresia formei normale disjunctive (cu mintermeni) a funcţiei logice de 4 variabile care ia valoarea 1 dacă pqrs văzut ca număr binar are o valoare mai mică decâ 10.",
+    "answers": {
+      "a": "p̄+ q̄r̄",
+      "b": "p̄qr + pq̄ + pq",
+      "c": "p+ p̄q̄s",
+      "d": "pqr + r̄",
+      "e": "pq + qr + rs"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "Se consideră următorul conţinut al registrelor şi al memoriei: (XR1) = 1; (1000) = 0; (3000) = 4; (B2) = 2000; (2000) = 2; (B1) = 1000; (1001) = 1; (3001) = 5; (2001) = 3; (0) = 1000. Care este valoarea lui F după execuţia programului următor: 1) LOAD 3000; 2) LOAD 2000, XR1; 3) SUB 2001,B1 4) MPY 1001,B2; 5) DIV 2000; 6) ADD 1000, IM; 7) SUB 0,I,XR1; 8) STA F;",
+    "answers": {
+      "a": "1001",
+      "b": "1002",
+      "c": "1003",
+      "d": "1004",
+      "e": "1005"
+    },
+    "correct": ["d"]
+  },
+  {
+    "question": "Se consideră o memorie centrală unde fiecare octet este adresat separat. Calculaţi ı̂n hexazecimal adresa celui de-al 7-lea element al unui tablou cu adresa primului element 100016 şi fiecare element are 16 biţi.",
+    "answers": {
+      "a": "1008",
+      "b": "1009",
+      "c": "100A",
+      "d": "100B",
+      "e": "100C"
+    },
+    "correct": ["e"]
+  },
+  {
+    "question": "Se consideră o memorie ı̂ntreţesută constituită din două unităţi de câte 4 Mo. Ştiind că adresa de memorie se constituie pe 23 de biţi astfel: 1 bit identifică superunitatea, 20 biţi specifică adresa ı̂n cadrul unităţii, iar ultimii 2 biti octetul din cadrul cuvântului), să se identifice (̂ın zecimal) linia ı̂ntr-o memorie cache de 1Ko precum şi biţii de pondere mare ai adresei de memorie A = 10000.",
+    "answers": {
+      "a": "600; 42",
+      "b": "600; 2",
+      "c": "452; 42",
+      "d": "600; 24",
+      "e": "452; 2"
+    },
+    "correct": ["e"]
+  },
+  {
+    "question": "Presupunem că o adresă ı̂n memoria virtuală paginată, necesită 20 de biţi organizaţi astfel: offset (cuvânt): biţii de la 0 la 11; pagina: biţii de la 12 la 19; Care este adresa octală a celui de-al 970-lea cuvânt de la pagina 213 ?",
+    "answers": {
+      "a": "3251718",
+      "b": "3251711",
+      "c": "3261711",
+      "d": "3261811",
+      "e": "3271711"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Presupunem că o adresă ı̂n memoria virtuală paginată, necesită 20 de biţi organizaţi astfel: offset (cuvânt): biţii de la 0 la 11; pagina: biţii de la 12 la 19; Care este numărul cuvântului şi numărul de pagină pentru adresa hexazecimală ABCDE? Daţi rezultatul in zecimal.",
+    "answers": {
+      "a": "4000; 171",
+      "b": "3295; 170",
+      "c": "3294; 171",
+      "d": "4500; 200",
+      "e": "2951; 117"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "Presupunem că o adresă ı̂n memoria virtuală segmentată şi paginată, necesită 24 de biţi organizaţi astfel: offset (cuvânt): biţii de la 0 la 7; pagina: biţii de la 8 la 17; segment: biţii de la 18 la 23; Care este adresa octală a celui de-al 145-lea cuvânt de la pagina 111 a segmentului al 32-lea?",
+    "answers": {
+      "a": "37067620",
+      "b": "32517180",
+      "c": "32517160",
+      "d": "37007620",
+      "e": "37062620"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "Presupunem că o adresă ı̂n memoria virtuală segmentată şi paginată, necesită 24 de biţi organizaţi astfel: offset (cuvânt): biţii de la 0 la 7; pagina: biţii de la 8 la 17; segment: biţii de la 18 la 23; Care este numărul cuvântului şi numărul de pagină pentru adresa hexazecimală ABCDE? Daţi rezultatul in zecimal.",
+    "answers": {
+      "a": "144; 111; 31",
+      "b": "150; 120; 131",
+      "c": "119; 053; 33",
+      "d": "150; 111; 131",
+      "e": "155; 120; 131"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "Care este efectul următoarei secvenţe de instrucţiuni care se execută pe o maşină cu programare pe zero adrese: 1) LOAD B; 2) LOAD C; 3) LOAD D 4) LOAD E; 5) DIV ; 6) ADD ;7) LOAD F; 8) LOAD G; 9) MPY ; 10) ADD ; 11) MPY ; STA R;",
+    "answers": {
+      "a": "R = B × (C +D/E + F ×G)",
+      "b": "R = B/(C +D/E + F ×G)",
+      "c": "R = B × (C +D/E − F ×G)",
+      "d": "R = B × (C +D/E + F/G)",
+      "e": "R = B × (C +D × E + F ×G)"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "Apelul sistem SLEEP produce:",
+    "answers": {
+      "a": "trecerea producătorului ı̂n starea BLOCAT dacă buffer-ul este gol",
+      "b": "blocarea procesului până când un altul ı̂l trezeşte prin WAKEUP",
+      "c": "blocarea procesului până când un altul lansează apelul SLEEP",
+      "d": "trecerea procesului precizat de parametrul apelului ı̂n starea GATA"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Planificarea preemptivă este strategia de planificare conform căreia:",
+    "answers": {
+      "a": "un proces nu poate fi suspendat temporar dacă este ı̂n starea GATA",
+      "b": "un proces care din punct de vedere logic poate fi executat este temporar suspendat",
+      "c": "un proces odată lansat ı̂n execuţie nu mai este suspendat atunci când poate fi ı̂n execuţie",
+      "d": "un proces nu poate fi suspendat temporar dacă este ı̂n starea BLOCAT"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Planificarea Round-Robin:",
+    "answers": {
+      "a": "determină atribuirea unei cuante de timp ı̂n care procesului ı̂i este permis să ruleze",
+      "b": "determină suspendarea unui proces ı̂ntr-un moment arbitrar",
+      "c": "determină atribuirea unei priorităţi fixe pentru execuţia unui proces",
+      "d": "determina lansarea ı̂n execuţie a unui proces daca nu exista altul mai prioritar ı̂n execuţie"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "Care din următoarele funcţiuni sunt ı̂ndeplinite de sistemul calculator hardware generator de bază:",
+    "answers": {
+      "a": "funcţia de conservare a informaţiei",
+      "b": "funcţia de generare a informaţiei",
+      "c": "funcţia de prelucrare a informaţiei",
+      "d": "funcţia de recepţionare a informaţiei"
+    },
+    "correct": ["a", "c", "d"]
+  },
+  {
+    "question": "Subunităţile de ı̂ntrerupere sunt:",
+    "answers": {
+      "a": "un mijloc de ı̂ntrerupere al sistemului calculator",
+      "b": "un mecanism de transmitere a informaţillor ı̂ntre dispozitivele de intrare-ieşire",
+      "c": "un mijloc de terminare a unei operaţii de intrare-ieşire",
+      "d": "un mijloc de comunicaţie ı̂ntre sistemul calculator hardware şi sistemul de operare"
+    },
+    "correct": ["d"]
+  },
+  {
+    "question": "La declanşarea unei ı̂ntreruperi prima acţiune desfăşurată ı̂n sistemul calculator este:",
+    "answers": {
+      "a": "salvarea registrelor procesului ı̂ntrerupt ı̂n tabela de procese",
+      "b": "ı̂ncarcărcarea registrului program counter cu conţinutul vectorului de ı̂ntrerupere",
+      "c": "salvarea stării programului ı̂ntrerupt ı̂n stivă",
+      "d": "modificarea stării procesului ı̂ntrerupt"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "Mecanismul de adresare al memoriei este:",
+    "answers": {
+      "a": "mecanismul prin care se ı̂ncarcă programele ı̂n memorie",
+      "b": "mecanismul prin care se traduce memoria virtuală ı̂n memorie reală",
+      "c": "mecanismul prin care se construiesc adresele de memorie",
+      "d": "mecanismul prin care se depun datele ı̂n memoria operativă"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Apelurile sistem DOWN şi UP acţionează asupra unei variabile de tip:",
+    "answers": {
+      "a": "contor",
+      "b": "semafor",
+      "c": "contor de evenimente",
+      "d": "condiţie"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Un proces este:",
+    "answers": {
+      "a": "activitatea unităţii de prelucrare",
+      "b": "un program compilat",
+      "c": "un program ı̂n execuţie",
+      "d": "un program link-editat"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "Registrul “contor program” conţine:",
+    "answers": {
+      "a": "adresele operanzilor operaţiei ce trebuie executată",
+      "b": "adresa următoarei instrucţiuni ce trebuie executată",
+      "c": "chiar operanzii operaţiei ce trebuie executată",
+      "d": "numărul instrucţiunii ce trebuie executată"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Secţiunile critice sunt:",
+    "answers": {
+      "a": "secvenţe de program care trebuie tratate cu mare atenţie",
+      "b": "secvenţe de tratare a ı̂ntreruperilor importante",
+      "c": "secvenţe din activitatea sistemului calculator când resursele sunt insuficiente",
+      "d": "secvenţe de program unde se accesează date partajate"
+    },
+    "correct": ["d"]
+  },
+  {
+    "question": "Planificatorul este componenta sistemului de operare care decide:",
+    "answers": {
+      "a": "care proces trece ı̂n starea de execuţie şi pentru cât timp",
+      "b": "care proces trebuie terminat şi care proces trebuie ı̂nceput",
+      "c": "care dispozitiv periferic va fi folosit de către program",
+      "d": "care dintre fişierele deschise trebuie ı̂nchis la un moment dat"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "Criteriile generale urmărite de algoritmii de planificare sunt:",
+    "answers": {
+      "a": "corectitudinea (echitabilitatea)",
+      "b": "respectarea politicii SO",
+      "c": "eficienţa",
+      "d": "mentenabilitatea"
+    },
+    "correct": ["a", "b", "c"]
+  },
+  {
+    "question": "Un sistem de operare asigură ı̂ndeplinirea următoarelor funcţii:",
+    "answers": {
+      "a": "creşterea performanţelor unităţii de prelucrare",
+      "b": "un management eficient al resurselor fizice şi logice",
+      "c": "asistarea utilizatorului printr-un sistem dezvoltat de comunicaţie",
+      "d": "protecţia informaţiei"
+    },
+    "correct": ["b", "c", "d"]
+  },
+  {
+    "question": "Care din următoarele resurse fizice este “preemptibilă”:",
+    "answers": {
+      "a": "banda magnetică",
+      "b": "memoria",
+      "c": "scanerul",
+      "d": "imprimanta"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Excepţiile program sunt:",
+    "answers": {
+      "a": "evenimente care se produc la nivelul dispozitivelor fizice tratate prin intermediul unor secvenţe de program",
+      "b": "ı̂ntreruperi ale maşinii abstracte reprezentate prin programul care se execută pe un sistem calculator real",
+      "c": "mijloace de autôıntrerupere a unui program pentru a solicita executarea unor funcţii de către sistemul de operare",
+      "d": "evenimente datorate execuţiei unei anume instrucţiuni din programul care rulează"
+    },
+    "correct": ["b", "c", "d"]
+  },
+  {
+    "question": "Care dintre următoarele operaţii se pot efectua asupra variabilelor contor?",
+    "answers": {
+      "a": "ADVANCE",
+      "b": "AWAIT",
+      "c": "READ",
+      "d": "AWAKE"
+    },
+    "correct": ["a", "b", "c"]
+  },
+  {
+    "question": "Principalele funcţiuni ale sistemelor de operare sunt:",
+    "answers": {
+      "a": "managementul fişierelor",
+      "b": "managementul serverelor",
+      "c": "managementul memoriei",
+      "d": "managementul dispozitivelor periferice",
+      "e": "managementul proceselor"
+    },
+    "correct": ["a", "d", "e"]
+  },
+  {
+    "question": "Prin construcţia sistemului calculator fiecărui nivel de ı̂ntrerupere i se asociază:",
+    "answers": {
+      "a": "un registru de adresare",
+      "b": "o instrucţiune de calcul",
+      "c": "o adresă de memorie specifică",
+      "d": "un registru general"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "Tranziţia unui proces din starea “̂ın execuție” ı̂n starea “blocat” are loc atunci când:",
+    "answers": {
+      "a": "planificatorul decide suspendarea procesului pentru a lansa un altul mai prioritar",
+      "b": "planificatorul decide blocarea procesului din cauza unei erori",
+      "c": "procesul aşteaptă apariţia unor date de care depinde continuarea execuţiei",
+      "d": "procesul nu mai poate continua execuţia din cauza unei erori"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "Subsistemul memorie satisface următoarele proprietăţi:",
+    "answers": {
+      "a": "permite accesul direct la fişiere",
+      "b": "permite extensia modulară",
+      "c": "permite alocarea dinamică",
+      "d": "permite lucrul ı̂n paralel"
+    },
+    "correct": ["b", "c", "d"]
+  },
+  {
+    "question": "Planificarea pe două nivele se utilizează atunci când:",
+    "answers": {
+      "a": "procesele din sistemul calculator nu ocupă ı̂ntreaga memorie operativă existentă",
+      "b": "ı̂n memoria operativă nu se poate păstra la un moment dat decât un singur proces",
+      "c": "procesele active la un moment dat au priorităţi diferite",
+      "d": "memoria necesară proceselor active la un moment dat depăşeşte dimensiunea memoriei existente"
+    },
+    "correct": ["d"]
+  },
+  {
+    "question": "În sistemele de operare de tip client-server nucleul acestuia realizează:",
+    "answers": {
+      "a": "servirea proceselor server",
+      "b": "servirea proceselor client",
+      "c": "transportul mesajelor de la procesele client către procesele server",
+      "d": "accesul la resursele proceselor client şi ale proceselor server"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "Fiecare nivel al ierarhiei sistemului de calcul este un sistem calculator caracterizat de:",
+    "answers": {
+      "a": "structuri de informaţie",
+      "b": "relaţia ı̂ntre nivele",
+      "c": "tipuri de date",
+      "d": "operaţii primitive"
+    },
+    "correct": ["a", "c", "d"]
+  },
+  {
+    "question": "Un vector de ı̂ntrerupere reprezintă:",
+    "answers": {
+      "a": "adresele punctelor de ı̂ntrerupere a activităţii sistemului calculator",
+      "b": "punctul de intrare ı̂n sistemul de operare relativ la evenimentul care a determinat apariţia ı̂ntreruperii",
+      "c": "direcţia către care se ı̂ndreaptă sistemul de operare",
+      "d": "o colecţie de registre la care au acces toate subunităţile care pot fi ı̂ntrerupte de unitatea centrală"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Fie un sistem cu 5 procese, notate A,B,C,D,E şi 4 resurse R,S,T,U pentru care cunoaştem că: - procesul A este blocat pe resursa T şi deţine U - procesul B solicită pe U şi deţine S - procesul C deţine R - procesul D este blocat pe S şi R şi deţine T - procesul E este blocat pe R Procesele şi resursele implicate ı̂n interblocare sunt:",
+    "answers": {
+      "a": "nu exista interblocare",
+      "b": "A-S-D-U-C-T-B",
+      "c": "A-U-B-S-D-R",
+      "d": "B-U-A-T-D-R",
+      "e": "D-S-B-U-A-T"
+    },
+    "correct": ["e"]
+  },
+  {
+    "question": "Evacuarea-rêıncărcarea proceselor (swapping) este procesul de:",
+    "answers": {
+      "a": "terminare, respectiv ı̂ncepere a proceselor",
+      "b": "transfer al datelor ı̂n fişiere pe disc",
+      "c": "lansare ı̂n execuţie a programelor",
+      "d": "transfer al proceselor ı̂ntre memorie şi disc"
+    },
+    "correct": ["d"]
+  },
+  {
+    "question": "Funcţia unui operator al unităţii de prelucrare reprezintă:",
+    "answers": {
+      "a": "mulţimea operaţiilor de verificare a operanzilor operatorului respectiv",
+      "b": "mulţimea operaţiilor primitive diferite care pot fi executate de operatorul respectiv",
+      "c": "multimea operatiilor binare ale sistemului calculator",
+      "d": "multimea subprogramelor pe care le poate executa un operator"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Un subsistem funcţional al sistemului calculator este compus din:",
+    "answers": {
+      "a": "unitate funcţională propriu-zisă",
+      "b": "unitate de control",
+      "c": "unitate de legătură",
+      "d": "unitate de comanda"
+    },
+    "correct": ["a", "b"]
+  },
+  {
+    "question": "Operatorii unităţii de prelucrare sunt:",
+    "answers": {
+      "a": "operatorul binar",
+      "b": "operatorul virgula fixă",
+      "c": "operatorul virgulă mobilă",
+      "d": "operatorul zecimal"
+    },
+    "correct": ["a", "c", "d"]
+  },
+  {
+    "question": "Tranziţia unui proces din starea “̂ın execuţie” ı̂n starea “gata” are loc atunci când:",
+    "answers": {
+      "a": "planificatorul decide suspendarea procesului pentru că i-a expirat cuanta de timp alocată",
+      "b": "planificatorul, ı̂n urma analizei proceselor active stabileşte că un proces nu poate continua execuţia",
+      "c": "procesul nu mai are date de prelucrat şi trebuie să-şi termine execuţia",
+      "d": "procesul nu mai are date de transferat şi poate sa-şi continue execuţia"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "Într-un sistem de operare de tip client-server procesele server lucrează ı̂n modul de lucru:",
+    "answers": {
+      "a": "supervizor",
+      "b": "kernel",
+      "c": "utilizator",
+      "d": "privilegiat"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "Cuvântul de stare al programului (PSW):",
+    "answers": {
+      "a": "asigură interfaţa ı̂ntre sistemul calculator şi program",
+      "b": "asigură interfaţa ı̂ntre sistemul de operare şi program",
+      "c": "asigură interfaţa ı̂ntre unitatea de prelucrare şi program",
+      "d": "asigură interfaţa ı̂ntre sistemul calculator şi sistemul de operare"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Pentru a se evita “condiţiile de competiţie” este nevoie să utilizăm:",
+    "answers": {
+      "a": "variabile partajate",
+      "b": "fişiere partajate",
+      "c": "excludere mutuală",
+      "d": "secţiuni critice"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "Planificarea cu cozi multiple se aplică la:",
+    "answers": {
+      "a": "sistemele calculator la care comutarea ı̂ntre procese este foarte rapidă",
+      "b": "sistemele calculator la care comutarea ı̂ntre procese este foarte lentă",
+      "c": "sistemele calculator cu două procesoare",
+      "d": "sistemele calculator pentru conducerea proceselor industriale"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "O reţea de calculatoare reprezintă:",
+    "answers": {
+      "a": "o colecţie de calculatoare autonome interconectate prin cablu UTP",
+      "b": "o colecţie de calculatoare personale conectate la Internet",
+      "c": "o colecţie de calculatoare autonome interconectate folosind o singură tehnologie",
+      "d": "o colecţie de calculatoare autonome interconectate folosind o arhitectură client-server",
+      "e": "o colecţie de calculatoare personale interconectate folosind o tehnologie orientată pe conexiuni"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "O reţea de calculatoare a cărei răspândire este la nivelul unui campus este:",
+    "answers": {
+      "a": "o reţea locală",
+      "b": "o reţea metropolitană",
+      "c": "o reţea de tip stea",
+      "d": "o reţea cu difuzare",
+      "e": "o reţea larg răspândită geografic"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "O reţea de tip inel:",
+    "answers": {
+      "a": "conectează printr-un singur cablu toate calculatoarele din reţea",
+      "b": "conectează fiecare calculator de alte două",
+      "c": "foloseşte un calculator central care va fi conectat cu toate celelalte prin conexiuni directe",
+      "d": "conectează toate calculatoarele ı̂ntre ele fără ca vreunul să aibă rol coodonator",
+      "e": "are un singur canal de comunicaţie care este partajat de toate maşinile din reţea"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Reţelele care dispun de numeroase conexiuni ı̂ntre perechi de maşini individuale sunt:",
+    "answers": {
+      "a": "reţele cu difuzare",
+      "b": "reţele de tip stea",
+      "c": "reţele de tip plasă",
+      "d": "reţele de tip punct-la-punct",
+      "e": "reţele de tip magistrală"
+    },
+    "correct": ["d"]
+  },
+  {
+    "question": "Stiva de protocoale reprezintă:",
+    "answers": {
+      "a": "o structură de date de tip ultimul intrat – primul servit folosită de protocoalele reţelei",
+      "b": "o listă de protocoale folosite de un anumit sistem câte un protocol pentru fiecare nivel",
+      "c": "stiva folosită pentru transmiterea parametrilor funcţiilor realizate de protocoalele unei reţele"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Pentru a utiliza un serviciu orientat pe conexiuni beneficiarul trebuie să:",
+    "answers": {
+      "a": "stabilească o conexiune, să folosească această conexiune şi apoi să o elibereze",
+      "b": "se conecteze la reţea folosind un nume de utilizator şi o parola corespunzătoare",
+      "c": "să nu folosească medii de comunicaţie fără fir (wireless)"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "Un serviciu este:",
+    "answers": {
+      "a": "un set de primitive (operaţii) pe care un nivel le furnizează entităţii pereche de pe calculatorul cu care comunică",
+      "b": "un set de primitive (operaţii) pe care un nivel le furnizează nivelului de deasupra sa",
+      "c": "un set de primitive (operaţii) pe care un nivel le furnizează nivelului fizic",
+      "d": "un set de primitive (operaţii) pe care un nivel le pune la dispoziţia utilizatorului",
+      "e": "un set de primitive (operaţii) pe care un nivel le furnizează interfeţelor de reţea"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Un protocol este:",
+    "answers": {
+      "a": "un set de reguli folosit pentru apelul primitivelor de serviciu",
+      "b": "un set de reguli care guvernează formatul şi semnificaţia cadrelor, pachetelor sau mesajelor schimbate ı̂ntre ele de entităţile pereche de pe un anumit nivel",
+      "c": "un set de reguli care guvernează formatul pachetelor transmise nivelelor superioare",
+      "d": "un set de reguli care guvernează formatul pachetelor transmise nivelului fizic"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Care dintre următoarele niveluri nu face parte din modelul ISO-OSI?",
+    "answers": {
+      "a": "nivelul fizic",
+      "b": "nivelul legătură de date",
+      "c": "nivelul internet",
+      "d": "nivelul transport",
+      "e": "nivelul sesiune"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "Care dintre următoarele niveluri nu face parte din modelul TCP/IP?",
+    "answers": {
+      "a": "nivelul internet",
+      "b": "nivelul transport",
+      "c": "nivelul prezentare",
+      "d": "nivelul aplicaţie",
+      "e": "nivelul gazdă-la-reţea"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "Care dintre următoarele sarcini NU aparţine nivelului legătură de date?",
+    "answers": {
+      "a": "tratarea erorilor",
+      "b": "tratarea secvenţialităţii",
+      "c": "controlul traficului",
+      "d": "controlul accesului la mediu"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Care dintre următoarele sarcini NU aparţine nivelului reţea?",
+    "answers": {
+      "a": "dirijarea pachetelor",
+      "b": "controlul congestiei",
+      "c": "calitatea serviciilor",
+      "d": "refacerea ordinii de transmisie a pachetelor",
+      "e": "interconectarea reţelelor eterogene"
+    },
+    "correct": ["d"]
+  },
+  {
+    "question": "Care dintre următoarele sarcini NU aparţine nivelului sesiune?",
+    "answers": {
+      "a": "difuzarea mesajelor",
+      "b": "controlul dialogului",
+      "c": "sincronizarea",
+      "d": "gestiunea jetonului"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "Care dintre următoarele afirmaţii este FALSĂ?",
+    "answers": {
+      "a": "Modelul OSI suportă ambele tipuri de comunicaţii – orientată pe conexiuni respectiv fără conexiuni – la nivelul reţea",
+      "b": "Modelul OSI suportă numai comunicaţia orientată pe conexiuni la nivelul transport",
+      "c": "Modelul TCP/IP suportă ambele tipuri de comunicaţii – orientată pe conexiuni respectiv fără conexiuni – la nivelul transport",
+      "d": "Modelul TCP/IP suportă numai comunicaţia fără conexiuni la nivelul reţea",
+      "e": "Modelul OSI suportă numai comunicaţia fără conexiuni la nivelul transport"
+    },
+    "correct": ["e"]
+  },
+  {
+    "question": "Care dintre protocoalele următoare nu este de nivel aplicaţie?",
+    "answers": {
+      "a": "HTTP",
+      "b": "UDP",
+      "c": "FTP",
+      "d": "SMTP",
+      "e": "DNS"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Care dintre următoarele afirmaţii este ADEVĂRATĂ?",
+    "answers": {
+      "a": "TCP este un protocol sigur orientat pe conexiuni",
+      "b": "TCP este un protocol sigur fără conexiuni",
+      "c": "UDP este un protocol sigur fără conexiuni",
+      "d": "UDP este un protocol nesigur orientat pe conexiuni",
+      "e": "TCP este un protocol nesigur orientat pe conexiuni"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "Serviciile de bază, oferite ı̂n mod curent de către nivelul legătură de date sunt:",
+    "answers": {
+      "a": "serviciu neconfirmat fără conexiune",
+      "b": "serviciu neconfirmat orientat-conexiune",
+      "c": "serviciu confirmat fără conexiune",
+      "d": "serviciu confirmat orientat-conexiune"
+    },
+    "correct": ["a", "c", "d"]
+  },
+  {
+    "question": "Controlul fluxului ı̂n nivelul legătură de date se face prin:",
+    "answers": {
+      "a": "controlul erorilor",
+      "b": "reacţie inversă",
+      "c": "controlul retransmisiilor",
+      "d": "detectarea coliziunilor"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Protocoalele folosite pentru a determina cine urmează să transmită ı̂ntr-un canal multiacces aparţin:",
+    "answers": {
+      "a": "subnivelului MAC",
+      "b": "subnivelului LLC",
+      "c": "nivelului fizic",
+      "d": "nivelului legatură de date"
+    },
+    "correct": ["a", "d"]
+  },
+  {
+    "question": "Care dintre cămpurile de mai jos aparţin unui cadru (frame) Ethernet?",
+    "answers": {
+      "a": "adresă destinaţie",
+      "b": "date",
+      "c": "sumă de control",
+      "d": "port sursă"
+    },
+    "correct": ["a", "b", "c"]
+  },
+  {
+    "question": "Adresele subnivelului MAC Ethernet se reprezintă pe:",
+    "answers": {
+      "a": "4 octeţi",
+      "b": "5 octeţi",
+      "c": "6 octeţi",
+      "d": "8 octeţi"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "Lungimea minimă a unui cadru Ethernet valid este de:",
+    "answers": {
+      "a": "40 octeţi",
+      "b": "80 octeţi",
+      "c": "64 octeţi",
+      "d": "128 octeţi"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "Care dintre regulile următoare sunt utilizate pentru dirijarea traficului ı̂n cadrul punţilor transparente (transparent bridges)?",
+    "answers": {
+      "a": "Dacă LAN-ul sursă este acelaşi cu LAN-ul destinaţie, atunci abandonează cadrul",
+      "b": "Dacă LAN-ul sursă şi cel destinaţie sunt diferite, atunci transmite cadrul",
+      "c": "Dacă LAN-ul destinaţie nu este cunoscut, atunci foloseşte inundarea",
+      "d": "Dacă LAN-ul destinaţie nu este cunoscut, atunci abandonează cadrul"
+    },
+    "correct": ["a", "b", "c"]
+  },
+  {
+    "question": "Serviciile nivelului reţea au fost proiectate având ı̂n vedere următoarele scopuri:",
+    "answers": {
+      "a": "serviciile trebuie să fie independente de tehnologia ruterului",
+      "b": "nivelul transport trebuie sa fie independent de numărul, tipul şi topologia ruterelor existente",
+      "c": "adresele de reţea disponibile la nivelul transport trebuie să folosească o schemă de numerotare uniformă, chiar ı̂n cadrul reţelelor LAN şi WAN",
+      "d": "serviciile trebuie să asigure evitarea coliziunilor"
+    },
+    "correct": ["a", "b", "c"]
+  },
+  {
+    "question": "Care dintre următoarele câmpuri fac parte din datagrama IP?",
+    "answers": {
+      "a": "versiune",
+      "b": "tip serviciu",
+      "c": "port destinaţie",
+      "d": "timp de viaţă"
+    },
+    "correct": ["a", "b", "d"]
+  },
+  {
+    "question": "Mulţimea adreselor IP de clasă A se regăseşte ı̂n intervalul de adrese:",
+    "answers": {
+      "a": "10.0.0.0 – 127.255.255.255",
+      "b": "128.0.0.0 – 191.255.255.255",
+      "c": "1.0.0.0 – 127.255.255.255",
+      "d": "1.0.0.0 – 127.0.0.1"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "Mulţimea adreselor IP de clasă B se regăseşte ı̂n intervalul de adrese:",
+    "answers": {
+      "a": "128.0.0.0 – 192.0.0.0",
+      "b": "128.0.0.0 – 191.255.255.255",
+      "c": "127.255.255.255 – 191.255.255.255",
+      "d": "127.0.0.1 – 192.0.0.0"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Mulţimea adreselor IP de clasă C se regăseşte ı̂n intervalul de adrese:",
+    "answers": {
+      "a": "191.255.255.255 – 223.255.255.255",
+      "b": "192.0.0.0 – 224.0.0.0",
+      "c": "191.255.255.255 – 224.0.0.0",
+      "d": "192.0.0.0 – 223.255.255.255"
+    },
+    "correct": ["d"]
+  },
+  {
+    "question": "Mulţimea adreselor IP de clasă D se regăseşte ı̂n intervalul de adrese:",
+    "answers": {
+      "a": "224.0.0.0 – 239.255.255.255",
+      "b": "223.255.255.255 – 239.255.255.255",
+      "c": "223.255.255.255 – 240.0.0.0",
+      "d": "224.0.0.0 – 240.0.0.0"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "Mulţimea adreselor IP de clasă E se regăseşte ı̂n intervalul de adrese:",
+    "answers": {
+      "a": "240.0.0.0 – 255.255.255.255",
+      "b": "239.255.255.255 – 255.255.255.255",
+      "c": "240.0.0.0 – 255.0.0.0",
+      "d": "239.255.255.255 – 255.0.0.0"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "Biţii cei mai semnificativi ai unei adrese valide de clasă A au valorile:",
+    "answers": {
+      "a": "0",
+      "b": "1",
+      "c": "01",
+      "d": "10"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "Biţii cei mai semnificativi ai unei adrese valide de clasă B au valorile:",
+    "answers": {
+      "a": "10",
+      "b": "1",
+      "c": "01",
+      "d": "11"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "Biţii cei mai semnificativi ai unei adrese valide de clasă C au valorile:",
+    "answers": {
+      "a": "110",
+      "b": "111",
+      "c": "100",
+      "d": "10"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "Biţii cei mai semnificativi ai unei adrese valide de clasă D au valorile:",
+    "answers": {
+      "a": "1110",
+      "b": "110",
+      "c": "01",
+      "d": "10"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "Cărei clase de adrese aparţine adresa IP 88.100.10.23?",
+    "answers": {
+      "a": "A",
+      "b": "B",
+      "c": "C",
+      "d": "D"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "Cărei clase de adrese aparţine adresa IP 163.21.84.12?",
+    "answers": {
+      "a": "A",
+      "b": "B",
+      "c": "C",
+      "d": "D"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Cărei clase de adrese aparţine adresa IP 231.2.4.1?",
+    "answers": {
+      "a": "A",
+      "b": "B",
+      "c": "C",
+      "d": "D"
+    },
+    "correct": ["d"]
+  },
+  {
+    "question": "Protocolul ARP se utilizează pentru a afla:",
+    "answers": {
+      "a": "adresa Ethernet pe baza adresei IP",
+      "b": "adresa IP pe baza adresei Ethernet",
+      "c": "adresa IP pe baza claselor de adrese",
+      "d": "adresa IP destinaţie pe baza algoritmilor de dirijare"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "Care dintre obiectivele de mai jos sunt vizate de protocolul IPv6?",
+    "answers": {
+      "a": "reducerea dimensiunii tabelelor de dirijare",
+      "b": "extinderea adreselor Ethernet la 128 de biţi",
+      "c": "posibilitatea ca un calculator gazdă să migreze fără a-şi schimba adresa IP",
+      "d": "asigurarea unei securităţi sporite prin mecanisme de autentificare şi confidenţialitate"
+    },
+    "correct": ["a", "c", "d"]
+  },
+  {
+    "question": "Care dintre câmpurile următoare fac parte din antetul obligatoriu IPv6?",
+    "answers": {
+      "a": "următorul antet",
+      "b": "eticheta fluxului",
+      "c": "limita de salturi",
+      "d": "tipul nodului: client sau server"
+    },
+    "correct": ["a", "b", "c"]
+  },
+  {
+    "question": "Un sistem criptografic este",
+    "answers": {
+      "a": "Un tuplu format dintr-o funcţie de criptare, una de decriptare, domeniile de definiţie şi chei",
+      "b": "Un tuplu format din funcţie de criptare decriptare, domenii de definiţie şi chei",
+      "c": "Un tuplu format din funcţie de criptare şi chei",
+      "d": "Un aparat special de transformare a caracterelor",
+      "e": "O metoda de codificare"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "Un sistem de criptare prin shift-are are o cheie compusă din",
+    "answers": {
+      "a": "doua numere ı̂ntregi",
+      "b": "un număr natural",
+      "c": "un număr ı̂ntreg şi unul real",
+      "d": "un număr iraţional",
+      "e": "două numere"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Autentificarea unui mesaj reprezintă",
+    "answers": {
+      "a": "verificarea integrităţii mesajului primit de un destinatar",
+      "b": "modul prin care expeditorul nu poate nega faptul ca a transmis mesajul",
+      "c": "destinatarul unui mesaj trebuie să dispună de modalităţi de a verifica identitatea expeditorului şi originea mesajului"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "Non-Repudierea mesajului ı̂ntr-o reţea reprezintă",
+    "answers": {
+      "a": "Modul de a se accepta un mesaj",
+      "b": "după transmiterea unui mesaj, trebuie ca expeditorul să nu ı̂l poată nega",
+      "c": "după transmiterea unui mesaj trebuie ca destinatarul să nu poată să ı̂l refuze"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Criptologia reprezintă",
+    "answers": {
+      "a": "o metodă de codificare a mesajelor",
+      "b": "o metodă de analiza a corectitudinii mesajelor criptate",
+      "c": "un mod de criptare",
+      "d": "un mod de decriptare",
+      "e": "cumulul dintre criptare şi analiză criptografică"
+    },
+    "correct": ["e"]
+  },
+  {
+    "question": "Criptografia este",
+    "answers": {
+      "a": "o metodă de analiză a datelor",
+      "b": "un sistem de regăsire a mesajelor ı̂n clar din mesaje criptate",
+      "c": "ştiinţa matematică care asigură confidenţialitatea datelor"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "Sistemul de criptare cu cheie simetrică foloseşte",
+    "answers": {
+      "a": "o cheie pentru criptare şi una pentru decriptare, diferite",
+      "b": "o cheie pentru criptare şi una pentru decriptare, a doua fiind obţinută prin transformarea primei chei",
+      "c": "o cheie la criptare şi una la decriptare, identice",
+      "d": "o singura cheie, pentru criptare, decriptarea fiind făcută de destinatar, fără cheie"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "Criptarea de tip stream este o criptare",
+    "answers": {
+      "a": "simetrică, cu două chei diferite",
+      "b": "asimetrică, cu o singură cheie",
+      "c": "nu este o criptare, este o codificare",
+      "d": "este inversa criptării de tip bloc",
+      "e": "simetrică"
+    },
+    "correct": ["e"]
+  },
+  {
+    "question": "Criptarea de tip bloc, este",
+    "answers": {
+      "a": "o criptare asimetrică, cu două chei identice",
+      "b": "o criptare asimetrică",
+      "c": "o codificare a mesajului, pentru autentificare",
+      "d": "un mod de semnare",
+      "e": "o criptare simetrică"
+    },
+    "correct": ["e"]
+  },
+  {
+    "question": "Sniffer este un termen care defineşte",
+    "answers": {
+      "a": "un sistem criptografic simetric",
+      "b": "un sistem criptografic asimetric",
+      "c": "un mod de analiză a puterii unui algoritm criptografic",
+      "d": "un mod de analiză a datelor transferate ı̂ntr-o reţea de calculatoare"
+    },
+    "correct": ["d"]
+  },
+  {
+    "question": "SSL şi TLS sunt",
+    "answers": {
+      "a": "unul şi acelaşi protocol",
+      "b": "două protocoale criptografice pentru reţele",
+      "c": "două modele de criptare locale, al doilea se bazează pe primul"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Intr-o retea de calculatoare un sniffer are acces la datele",
+    "answers": {
+      "a": "toate datele care tranziteaza reteaua",
+      "b": "datele de la computerele legate indirect la acelasi server",
+      "c": "datele din computerele care sunt in aceeasi zona geografic˘",
+      "d": "datele de la computerele care comunica in orice fel cu un computer care are sniffer instalat",
+      "e": "datele din subreteaua primului switch de deasupra sa, in ierahia retelei"
+    },
+    "correct": ["e"]
+  },
+  {
+    "question": "O semnatura electronica are la baza",
+    "answers": {
+      "a": "un algoritm simetric de criptare",
+      "b": "un algoritm asimetric de criptare, in care semnatarul foloseste cheia publica",
+      "c": "un algoritm asimetric de criptare, in care semnatarul foloseste cheia privata",
+      "d": "o cheie pentru fiecare utilizator si fiecare mesaj"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "O retea de calculatoare are ca mod de comunicare standard un modul numit placa de retea. Aceasta comunica date",
+    "answers": {
+      "a": "criptat, cu un algoritm simetric",
+      "b": "criptat, cu un algoritm asimetric",
+      "c": ". semnate de destinatar",
+      "d": "in clar"
+    },
+    "correct": ["d"]
+  }
+]

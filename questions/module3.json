@@ -1,0 +1,927 @@
+[
+  {
+    "question": "Intre avantajele bazelor de date se numara:",
+    "answers": {
+      "a": "nepartajarea datelor intre utilizatori",
+      "b": "organizarea datelor pe doua niveluri - fizic si logic",
+      "c": "gestionarea centralizata a datelor printr-un SGBD",
+      "d": "integrarea in aceeasi structura a tuturor datelor pertinente ale unui sistem informatic",
+      "e": "independenta datelor fata de programele de aplicatii"
+    },
+    "correct": ["b", "c", "e"]
+  },
+  {
+    "question": "O entitate se caracterizeaza prin:",
+    "answers": {
+      "a": "este identificata unic printr-un nume",
+      "b": "cuprinde, in general, mai multe valori sau realizari",
+      "c": "administreaza obiecte",
+      "d": "semnifica un obiect concret sau abstract, reprezentat prin proprietatile sale",
+      "e": "semnifica o caracteristica a unui obiect concret"
+    },
+    "correct": ["a", "b", "d"]
+  },
+
+  {
+    "question": "O entitate din modelul Entitate-Asociere are urmatoarele caracteristici:",
+    "answers": {
+      "a": "are o existenta proprie",
+      "b": "este intotdeauna concreta",
+      "c": "trebuie definita fara ambiguitati",
+      "d": "este intotdeauna legata de o alta entitate printr-o asociatie",
+      "e": "este identificata unic prin ansamblul atributelor sale"
+    },
+    "correct": ["c", "e"]
+  },
+  {
+    "question": "Administratorul bazei de date asigura:",
+    "answers": {
+      "a": "scrierea programelor in cod-masina",
+      "b": "autorizarea accesului la date",
+      "c": "realizarea obiectivelor si functiilor sistemului",
+      "d": "definirea strategiei de salvare si restaurare a bazei de date",
+      "e": "crearea programelor de aplicatii"
+    },
+    "correct": ["b", "d"]
+  },
+
+  {
+    "question": "Se da tabelul: \n ANGAJATI (CodAngaj, Nume, DataAngajare, Compartiment, Profesia, Salariu) \n Care dintre urmatoarele instructiuni SQL permite afisarea numarului de salariati pe fiecare compartiment care incepe cu litera ”A”?",
+    "answers": {
+      "a": "SELECT CodAngajat, Nume, Compartiment FROM ANGAJATI WHERE Nume \n like A* ;",
+      "b": "SELECT COUNT(CodAngajat) AS Numar, Nume, Compartiment\n FROM ANGAJATI WHERE Nume like 'A*'\n GROUP BY Compartiment ;",
+      "c": "SELECT CodAngajat, Nume, Compartiment FROM ANGAJATI \n WHERE Compartiment like A*;",
+      "d": "SELECT COUNT(CodAngajat) \n AS Numar, Compartiment FROM ANGAJATI \n WHERE Compartiment like 'A*' GROUP BY Compartiment;",
+      "e": "Niciuna dintre cele de mai sus"
+    },
+    "correct": ["d"]
+  },
+
+  {
+    "question": "6. The following operations are equivalent:",
+    "answers": {
+      "a": "R3 = R1 U R2  and R3 = APPEND(R1, R2)",
+      "b": "R3 = R1 - R2  and R3 = R1 OR R2",
+      "c": "R3 = R1 X R2  and R3 = PRODUCT(R1, R2)",
+      "d": "R3 = R1 U R2  and R3 = UNION(R1, R2)",
+      "e": "R3 = R1 - (R1 - R2)  and R3 = AND(R1, R2)"
+    },
+    "correct": ["c", "d", "e"]
+  },
+
+  {
+    "question": "Given the table CHITANTE (NrChitanta, Suma, DataChitanta, NrGhiseu), which of the following SQL statements will display the days on which more than 2 receipts were issued?",
+    "answers": {
+      "a": "SELECT Nrchitanta, Suma, Data FROM CHITANTE WHERE COUNT(NrChitanta) > 2;",
+      "b": "SELECT Nrchitanta, Suma, Data FROM CHITANTE HAVING COUNT(NrChitanta) > 2;",
+      "c": "SELECT CHITANTE.Data FROM CHITANTE GROUP BY Data HAVING COUNT(NrChitanta) > 2;",
+      "d": "SELECT COUNT(Data), COUNT(NrChitanta) FROM CHITANTE WHERE Data IS Unique;",
+      "e": "SELECT Data FROM CHITANTE WHERE COUNT(NrChitanta) > 2;"
+    },
+    "correct": ["c"]
+  },
+
+  {
+    "question": "Se da entitatea ANGAJATI, cu urmatoarele atribute:\n ANGAJATI (CodAngaj, Nume, DataAngajare, compartiment, profesia, salariu) \n Care dintre urmatoarele instructiuni SQL permite stergerea salariatilor angajati inainte de inceputul\n anului 2007, cu profesia ”profesor”.",
+    "answers": {
+      "a": "DELETE FROM Angajati WHERE DataAngajare < \"1/1/2006\" AND profesia = \"profesor\";",
+      "b": "DELETE * FROM Angajati WHERE profesia LIKE \"profesor\" HAVING YEAR(DataAngajare) < 2007;",
+      "c": "DELETE Angajati WHERE DataAngajare < \"1/1/2007\" AND profesia LIKE \"*profesor*\";",
+      "d": "UPDATE Angajati SET CodAngaj = Null WHERE DataAngajare < \"1/1/2006\" AND profesia = \"profesor\";",
+      "e": "None of the above"
+    },
+    "correct": ["c"]
+  },
+
+  {
+    "question": "Fie tabelul proiecte(CodP roiect, CodAng, functie, suma) cu cheia (CodP roiect, CodAng), de stocare a informatiilor privind repartizarea pe proiecte a salariatilor unei firme. Suma obtinuta depinde de CodAng si de functia in acel proiect (CodAng, functie) → suma.\n Aplicand a doua forma normala care din schemele urmatoare este corecta?",
+    "answers": {
+      "a": "R1 = (CodProiect, CodAng, functie), R2 = (CodProiect, functie, suma)",
+      "b": "R1 = (CodProiect, CodAng, suma), R2 = (CodAng, functie)",
+      "c": "R1 = (CodProiect, CodAng, suma), R2 = (CodProiect, functie)",
+      "d": "R1 = (CodProiect, CodAng), R2 = (CodProiect, functie)",
+      "e": "Niciuna dintre cele de mai sus"
+    },
+    "correct": ["a"]
+  },
+
+  {
+    "question": "Fie relatia r de schema R si X ⊂ R, Y ⊂ R si dependenta tranzitiva K → X → Y . Care din \nurmatoarele descompuneri sunt in forma normala trei?",
+    "answers": {
+      "a": "R1 = K(R - Y), R2 = (KY)",
+      "b": "R1 = K(R - Y), R2 = (XY)",
+      "c": "R1 = K(R - Y), R2 = (XX)",
+      "d": "R1 = (R - Y), R2 = (XX)",
+      "e": "R1 = KY, R2 = (XX)"
+    },
+    "correct": ["a", "d", "e"]
+  },
+
+  {
+    "question": "Fie relatia r de schema R, X ⊂ R, Y ⊂ R,  Z = R - XY si dependenta multivoca X ↠ Y . Care din\nurmatoarele descompuneri sunt in forma normala patru?",
+    "answers": {
+      "a": "R1 = XZ, R2 = (XY)",
+      "b": "R1 = XZ, R2 = (X)",
+      "c": "R1 = K(R - Y), R2 = (XZ)",
+      "d": "R1 = XY, R2 = (XZ)",
+      "e": "R1 = KX, R2 = (XZ)"
+    },
+    "correct": ["a"]
+  },
+
+  {
+    "question": "Fie tabelul Studenti(NrLeg, LimbaStraina, M asina) with the following data:\n\n| NrLeg | LimbaStraina | Masina |\n|---|---|---|\n| 111 | Engleza | Logan |\n| 111 | Franceza | Logan |\n| 111 | Spaniola | Logan |\n| 111 | Engleza | Cielo |\n| 111 | Franceza | Cielo |\n| 112 | Engleza | Logan |\n| 112 | Franceza | Logan |\n\nand the multivalued dependencies NrLeg ↠ LimbaStraina and NrLeg ↠ Masina, which representation is in 4NF?",
+    "answers": {
+      "a": "R1 = (NrLeg, LimbaStraina), R2 = (NrLeg, Masina)",
+      "b": "R1 = (Masina, LimbaStraina), R2 = (NrLeg, LimbaStraina)",
+      "c": "R1 = (NrLeg, LimbaStraina), R2 = (NrLeg, LimbaStraina, Masina)",
+      "d": "R1 = (NrLeg, Masina), R2 = (NrLeg, LimbaStraina)",
+      "e": "R1 = (NrLeg, Masina), R2 = (NrLeg, LimbaStraina, Masina)"
+    },
+    "correct": ["a"]
+  },
+
+  {
+    "question": " Restrictiile referentiale intre 2 tabele sunt date de:",
+    "answers": {
+      "a": "Cheile primare si cheile externe",
+      "b": "Coloanele commune",
+      "c": "Coloanele din clauza CHECK",
+      "d": "Coloanele din SELECT",
+      "e": "Chei externe"
+    },
+    "correct": ["a"]
+  },
+
+  {
+    "question": "Fie baza de date formată din tabelele:\n\n* studenti(NrLeg, Nume, Pren, Fac, An, grupa)\n* cataloage(NrLeg, CodDis, dat, nota)\n* discipline(CodDis, Denumire, NrOreC, NrOreL, NrOreS, NrOreP, Credite, An, Sectie)\n\nCare din expresiile algebrei relaționale determină studenții din anul II?",
+    "answers": {
+      "a": "πAn(studenti)",
+      "b": "σAn=2(studenti)",
+      "c": "πAn(σAn=2(studenti))",
+      "d": "σAn(πAn=2(studenti))",
+      "e": "πNume(studenti)"
+    },
+    "correct": ["b"]
+  },
+
+  {
+    "question": "Pentru o bază de date relațională, algebra relațională este:",
+    "answers": {
+      "a": "Completă (permite să extrag orice informații din baza)",
+      "b": "Procedurală (Arată și modul cum se obțin informațiile din baza de date)",
+      "c": "Complexă (permite să extrag informații obiectuale)",
+      "d": "Limbaj formal",
+      "e": "Limbaj de interogare"
+    },
+    "correct": ["a", "d", "b", "e"]
+  },
+
+  {
+    "question": "Restricțiile date de dependențele funcționale pentru un tabel se testează cu ajutorul:",
+    "answers": {
+      "a": "Axiomelor de inferență",
+      "b": "Algoritmului de satisfacere (satisfie)",
+      "c": "Algoritmului de închidere",
+      "d": "Algoritmului de sortare",
+      "e": "Algoritmului de normalizare"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Fiind dată apriori o mulțime de restricții dată de o mulțime de dependențe funcționale F. Elaborarea unei proceduri pentru a verifica dependența funcțională X → Y presupune mai întâi:",
+    "answers": {
+      "a": "Verificarea redundanței acesteia",
+      "b": "Înlăturarea atributelor eliminabile din determinantul X",
+      "c": "Înlăturarea atributelor eliminabile din determinantul Y",
+      "d": "Înlăturarea atributelor eliminabile din X și Y",
+      "e": "Niciuna"
+    },
+    "correct": ["a", "b", "c", "d"]
+  },
+  {
+    "question": "Fiind dată apriori o mulțime de restricții dată de o mulțime de dependențe funcționale F. Elaborarea unei reguli de validare pentru o dependență funcțională X → Y presupune:",
+    "answers": {
+      "a": "Verificarea deductibilității din F",
+      "b": "Verificarea incluziunii X ⊂ Y",
+      "c": "Verificarea incluziunii X ⊂ X+",
+      "d": "Normalizarea schemei de relație XY",
+      "e": "Toate"
+    },
+    "correct": ["a", "c"]
+  },
+  {
+    "question": "Fiind dată apriori o mulțime de restricții dată de o mulțime de dependențe funcționale F. Aceasta este folosită la:",
+    "answers": {
+      "a": "Normalizarea bazei de date",
+      "b": "La validarea stării bazei de date",
+      "c": "Crearea bazei de date",
+      "d": "Crearea procedurilor de interogare",
+      "e": "Construcția algebrei relaționale"
+    },
+    "correct": ["a", "b"]
+  },
+  {
+    "question": "Interogările din SQL sunt la fel de expresive cu:",
+    "answers": {
+      "a": "Algebra relațională",
+      "b": "Calculul relațional al tuplurilor",
+      "c": "Calculul relațional al domeniilor",
+      "d": "Calculul procedural",
+      "e": "Calculul bazat pe tablouri"
+    },
+    "correct": ["a", "b", "c"]
+  },
+  {
+    "question": "O bază de date distribuită este:",
+    "answers": {
+      "a": "O colecție de date și de scheme partajate și interconectate logic, distribuite fizic pe calculatoarele unei rețele",
+      "b": "O colecție de date împărțită în mai multe fragmente",
+      "c": "O colecție de date împărțită în mai multe replici",
+      "d": "O colecție de fragmente mixte",
+      "e": "Niciuna"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "O tranzacție este:",
+    "answers": {
+      "a": "O unitate de program ce realizează citiri și scrieri",
+      "b": "O mulțime finită și ordonată de operații de citire, scriere și terminare",
+      "c": "O mulțime de instrucțiuni executabile dintr-un limbaj gazdă",
+      "d": "O serie finită de operații de modificare a datelor dintr-o bază de date ORACLE",
+      "e": "O mulțime finită de operații coerente, executate de un SGBD, care manipulează datele unei baze de date"
+    },
+    "correct": ["e"]
+  },
+  {
+    "question": "Numele unei coloane dintr-un tabel în ORACLE:",
+    "answers": {
+      "a": "trebuie să fie unic în cadrul tabelului",
+      "b": "trebuie să fie unic în cadrul bazei de date",
+      "c": "are asociat un index",
+      "d": "trebuie să apară în instrucțiunea CREATE TABLE",
+      "e": "trebuie să fie specificat în instrucțiunea ALTER TABLE"
+    },
+    "correct": ["a", "d"]
+  },
+  {
+    "question": "O tranzacție urmează un protocol în două faze dacă:",
+    "answers": {
+      "a": "Blochează accesul la un element de date",
+      "b": "Toate operațiile de blocare preced prima operație de deblocare",
+      "c": "Cere mai întâi deblocarea și apoi realizează blocarea accesului la un element de date",
+      "d": "Blochează tabelul la care are acces",
+      "e": "Blochează accesul altor utilizatori la o bază de date"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "Proprietatea de consistență a tranzacției constă din:",
+    "answers": {
+      "a": "Transformarea unei stări consistente într-o stare consistentă",
+      "b": "Eliminarea redundanțelor",
+      "c": "Izolarea tranzacțiilor în execuție",
+      "d": "Transparența",
+      "e": "Durabilitate"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "Un cursor este:",
+    "answers": {
+      "a": "Un pointer către un set de rezultate",
+      "b": "Un set de rezultate ale instrucțiunii SELECT",
+      "c": "O metodă de analiză a performanței",
+      "d": "O colecție de rânduri ale unei tabele",
+      "e": "Un buffer care păstrează rezultatul unei instrucțiuni SELECT"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "Abordarea distribuită a unei baze de date oglindește:",
+    "answers": {
+      "a": "Structura organizațională",
+      "b": "Paralelismul prelucrărilor",
+      "c": "Gestiunile locale ale bazelor de date",
+      "d": "Seriabilitatea tranzacțiilor",
+      "e": "Toate"
+    },
+    "correct": ["a", "c"]
+  },
+  {
+    "question": "O bază de date distribuită se găsește implementată numai:",
+    "answers": {
+      "a": "Într-o rețea de calculatoare",
+      "b": "Pe un calculator performant",
+      "c": "Pe mai multe calculatoare izolate, conectate la Internet",
+      "d": "Pe un calculator client",
+      "e": "Pe un laptop"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "O bază de date distribuită se găsește implementată numai:",
+    "answers": {
+      "a": "Într-o rețea de calculatoare",
+      "b": "Pe un calculator performant",
+      "c": "Pe mai multe calculatoare izolate, conectate la Internet",
+      "d": "Pe un calculator client",
+      "e": "Pe un laptop"
+    },
+    "correct": ["a"]
+  },
+
+  {
+    "question": "Tranzacțiile se numesc în 2 faze dacă:",
+    "answers": {
+      "a": "Satisfac protocolul în 2 faze",
+      "b": "Sunt formate numai din citiri și scrieri",
+      "c": "Conțin comenzile COMMIT și ROLLBACK",
+      "d": "Conțin 2 faze de execuție",
+      "e": "Conțin 2 faze, una de definire a datelor, și alta de prelucrare a lor"
+    },
+    "correct": ["a"]
+  },
+
+  {
+    "question": "Se dau tabelele:\n\nPERSONAL(Marca, Numepren, Compart, Datasv, Salorar, Salorarco, Compart)\nPONTAJE(Marca, Data, Orelucrate, Oreco, Orenoapte, Oreabsnem)\n\nCe afișează următoarea interogare?\n\n`sql\nWITH VENITURI AS\n(SELECT Numepren, SUM(Orelucrate*Salorar+Oreco*Salorarco) AS Venit_Baza\nFROM PONTAJE po INNER JOIN PERSONAL pe ON po.Marca=pe.Marca GROUP BY Numepren),\nrasp AS\n(SELECT MAX(SUM(Orelucrate*Salorar+Oreco*Salorarco)) AS Venit_Max from PONTAJE po\nINNER JOIN PERSONAL pe ON po.Marca=pe.Marca GROUP BY Numepren)\nSELECT Numepren,Venit_Baza from VENITURI INNER JOIN rasp ON Venit_Baza=Venit_Max\n`",
+    "answers": {
+      "a": "Venitul maxim al unui angajat dintr-un compartiment utilizând expresii tabelă",
+      "b": "Angajatul sau angajații cu cel mai mare venit utilizând expresii tabelă",
+      "c": "Venitul de bază al unui angajat utilizând operatorul INNER JOIN",
+      "d": "Veniturile angajaților în ordine descrescătoare utilizând expresii tabelă",
+      "e": "Numele angajatului din fiecare compartiment cu venitul cel mai mare"
+    },
+    "correct": ["b"]
+  },
+
+  {
+    "question": "Se dă tabelul:\n\nPREZENTA(Marca, Data, Orelucrate, Oreco, Orenoapte, Oreabsnem)\n\nCe execută următoarea secvență?\n\n`sql\nDECLARE\n  an salarii.an%TYPE := 2015;\n  luna salarii.luna%TYPE := 1;\n  prima_zi DATE;\n  zi DATE;\nBEGIN\n  prima_zi := TO_DATE('01/'||luna||'/'||an, 'DD/MM/YYYY');\n  zi := prima_zi;\n  WHILE zi <= LAST_DAY(prima_zi) LOOP\n    IF RTRIM(TO_CHAR(zi, 'DAY')) IN ('SATURDAY', 'SUNDAY') THEN\n      NULL;\n    ELSE\n      BEGIN\n        INSERT INTO pontaje (marca, data)\n        SELECT marca, zi FROM personal;\n      EXCEPTION\n        WHEN DUP_VAL_ON_INDEX THEN\n          DELETE FROM pontaje WHERE data = zi;\n          INSERT INTO pontaje (marca, data)\n          SELECT marca, zi FROM personal;\n      END;\n    END IF;\n    zi := zi + 1;\n  END LOOP;\n  COMMIT;\nEND;\n`",
+    "answers": {
+      "a": "Introduce înregistrări numai pentru zilele nelucrătoare",
+      "b": "Populează cu înregistrări tabela pe o lună dintr-un an",
+      "c": "Nu populează tabela datorită excepției DUP_VAL_ON_INDEX",
+      "d": "Dacă se execută de două ori succesiv, nu produce rezultate",
+      "e": "Dacă se execută de două ori succesiv, dublează înregistrările din tabelă"
+    },
+    "correct": ["b"]
+  },
+
+  {
+    "question": "Se dă tabelul STUDENT(CNP, Nume, Grupa, Adresa). Care secvență creează un view ce permite ca modificările în tabelă să se reflecte automat și în view?",
+    "answers": {
+      "a": "CREATE VIEW stud AS SELECT * FROM STUDENT WHERE Grupa IN (210,220);",
+      "b": "CREATE VIEW emp_vu AS SELECT * FROM STUDENT WHERE Grupa IN (210,220) WITH READ ONLY;",
+      "c": "CREATE VIEW stud AS SELECT * FROM STUDENT WHERE Grupa IN (210,220) WITH CHECK OPTION;",
+      "d": "CREATE FORCE VIEW stud AS SELECT * FROM STUDENT WHERE Grupa IN (210,220);",
+      "e": "CREATE FORCE VIEW stud AS SELECT * FROM STUDENT WHERE Grupa=210 OR GRUPA=220;"
+    },
+    "correct": ["c"]
+  },
+
+  {
+    "question": "Se dă tabelul STUDENT(CNP, Nume, Grupa, Adresa) și următoarea secvență ce reprezintă o tranzacție:\n\n```sql\nCREATE table STUDENT_NOU (CNP NUMBER, Nume VARCHAR2(30));\nINSERT INTO STUDENT_NOU SELECT CNP, Nume from STUDENT;\nSavepoint s1;\nUPDATE STUDENT_NOU SET Nume = UPPER(Nume);\nSavepoint s2;\nDELETE FROM STUDENT_NOU;\nRollback to s2;\nDELETE FROM STUDENT_NOU WHERE CNP=100;\nUPDATE STUDENT_NOU SET Nume = 'Ionescu';\nRollback to s2;\nUPDATE STUDENT_NOU SET Nume = 'Ionescu' WHERE CNP=100;\nRollback;\n```\n\nCare este rezultatul acestei tranzacții?",
+    "answers": {
+      "a": "Nu avem linii în tabelă",
+      "b": "Avem un student cu numele Ionescu",
+      "c": "Nu putem să facem ROLLBACK mai mult de o dată pe un punct de reluare",
+      "d": "Ultimul UPDATE eșuează deoarece studentul cu CNP-ul 100 a fost șters",
+      "e": "Tranzacția eșuează deoarece avem mai multe puncte de reluare"
+    },
+    "correct": ["a"]
+  },
+
+  {
+    "question": "Se dau tabelele ANGAJATI(ID-Angajat, Nume, ID-Compart, Salariu) și COMPARTIMENT (ID-Compart, Nume-Compart) și următoarea interogare:\n\n`sql\nSELECT e.EMPLOYEE_ID, e.LAST_NAME, e.DEPARTMENT_ID, d.DEPARTMENT_NAME \nFROM EMP e, DEPARTMENT d\nWHERE e.DEPARTMENT_ID = d.DEPARTMENT_ID;\n`\n\nCe operații implementează această interogare?",
+    "answers": {
+      "a": "Diferență, proiecția și join",
+      "b": "Selecția, proiecția și join",
+      "c": "Selecția, intersecția și join",
+      "d": "Intersecția, proiecția și join",
+      "e": "Diferență, intersecția și join"
+    },
+    "correct": ["b"]
+  },
+
+  {
+    "question": "Se dă tabelul STUDENT(CNP, Nume, Grupa, Adresa) cu cheia primară CNP și următoarele două declanșatoare:\n\nD1:\n`sql\nCREATE OR REPLACE TRIGGER t1\nBEFORE INSERT ON STUDENT\nREFERENCING OLD AS OLD NEW AS NEW\nFOR EACH ROW\nBEGIN\n  SELECT NVL(MAX(CNP), 100) + 1 INTO :NEW.CNP FROM STUDENT;\nEND;\n`\n\nD2:\n`sql\nCREATE SEQUENCE secventa INCREMENT BY 1 MINVALUE 101 MAXVALUE 500 NOCYCLE NOCACHE ORDER;\nCREATE OR REPLACE TRIGGER t2\nBEFORE INSERT ON STUDENT\nREFERENCING OLD AS OLD NEW AS NEW\nFOR EACH ROW\nBEGIN\n  SELECT secventa.NEXTVAL INTO :NEW.CNP FROM STUDENT;\nEND;\n`\n\nCare dintre următoarele afirmații sunt adevărate?",
+    "answers": {
+      "a": "Declanșatorul D1 atribuie o valoare maximă atributului CNP înainte de o nouă inserare",
+      "b": "Cele două declanșatoare produc același rezultat",
+      "c": "Declanșatorul D2 nu violează restricția de cheie primară",
+      "d": "Declanșatorul D1 poate viola restricția de cheie primară",
+      "e": "Cele două declanșatoare nu produc același rezultat"
+    },
+    "correct": ["a", "b", "c"]
+  },
+
+  {
+    "question": "Se dau tabelele ANGAJATI(ID-Angajat, Nume, ID-Compart, Salariu) și COMPARTIMENT (ID-Compart, Nume-Compart) și următorul declanșator:\n\n`sql\nCREATE OR REPLACE TRIGGER actual\nAFTER UPDATE OF ID_Compart ON COMPARTIMENT\nREFERENCING OLD AS OLD NEW AS NEW\nFOR EACH ROW\nBEGIN\n  UPDATE ANGAJATI SET ID_Compart = :NEW.ID_Compart\n  WHERE ID_Compart = :OLD.ID_Compart;\nEND;\n`\n\nCare dintre următoarele afirmații sunt adevărate?",
+    "answers": {
+      "a": "Comanda UPDATE trebuie să se limiteze numai la o linie a tabelului COMPARTIMENT",
+      "b": "Declanșatorul implementează opțiunea UPDATE CASCADE din Oracle",
+      "c": "Declanșatorul se va lansa numai la modificarea atributului ID-Compart din tabela COMPARTIMENT",
+      "d": "Comanda UPDATE poate modifica mai multe linii din tabela ANGAJATI",
+      "e": "Comanda UPDATE nu poate modifica mai multe linii din tabela ANGAJATI"
+    },
+    "correct": ["b", "c", "d", "a"]
+  },
+
+  {
+    "question": "Se dă tabelul PERSONAL(Marca, Numepren, Compart, Datasv, Salorar, Salorarco, Compart) și următorul bloc PL/SQL:\n\n`sql\nDECLARE\n  ani_etalon PLS_INTEGER := 15;\n  numar PLS_INTEGER;\nBEGIN\n  UPDATE personal\n  SET salorar = salorar + 10\n  WHERE MONTHS_BETWEEN(SYSDATE, datasv) / 12 >= ani_etalon;\n\n  IF SQL%FOUND THEN\n    DBMS_OUTPUT.PUT_LINE('Există cel puțin un angajat cu vechime de peste ' || ani_etalon || ' ani');\n    numar := SQL%ROWCOUNT;\n    DBMS_OUTPUT.PUT_LINE('Numărul lor este ' || numar);\n  ELSE\n    DBMS_OUTPUT.PUT_LINE('Niciun angajat nu îndeplinește condiția');\n  END IF;\nEND;\n`\n\nCare dintre următoarele afirmații sunt adevărate?",
+    "answers": {
+      "a": "Blocul mărește cu 10 lei salariul orar al tuturor angajaților",
+      "b": "Este un exemplu de cursor implicit",
+      "c": "Blocul mărește cu 10 lei salariul orar al angajaților cu o vechime de peste 15 ani",
+      "d": "Pentru afișarea la ecran a mesajelor din bloc, trebuie lansată comanda SET SERVEROUTPUT",
+      "e": "Blocul mărește cu 12 lei salariul orar al tuturor angajaților"
+    },
+    "correct": ["b", "c", "d"]
+  },
+
+  {
+    "question": "Se dau tabelele PERSONAL(Marca, Numepren, Compart, Datasv, Salorar, Salorarco, Compart) și PONTAJE(Marca, Data, Orelucrate, Oreco, Orenoapte, Oreabsnem) și următoarea procedură:\n\n`sql\nCREATE OR REPLACE PROCEDURE populare (an_ IN salarii.an%TYPE, luna_ IN salarii.luna%TYPE) IS\n  prima_zi DATE;\n  zi DATE;\nBEGIN\n  prima_zi := TO_DATE('01/'||luna_||'/'||an_, 'DD/MM/YYYY');\n  zi := prima_zi;\n  WHILE zi <= LAST_DAY(prima_zi) LOOP\n    IF RTRIM(TO_CHAR(zi, 'DAY')) IN ('SATURDAY', 'SUNDAY') THEN\n      NULL;\n    ELSE\n      BEGIN\n        INSERT INTO pontaje (marca, data)\n        SELECT marca, zi FROM personal;\n      EXCEPTION\n        WHEN DUP_VAL_ON_INDEX THEN\n          DELETE FROM pontaje WHERE data = zi;\n          INSERT INTO pontaje (marca, data)\n          SELECT marca, zi FROM personal;\n      END;\n    END IF;\n    zi := zi + 1;\n  END LOOP;\n  COMMIT;\nEND populare;\n`\n\nCare dintre următoarele afirmații sunt adevărate?",
+    "answers": {
+      "a": "Procedura nu permite încălcarea restricției de cheie primară",
+      "b": "Variabilele an și luna sunt parametrii formali",
+      "c": "Procedura populează tabela PONTAJE pe o lună și un an cu date din tabela PERSONAL",
+      "d": "Apelul se face astfel: populare(07, 2008);",
+      "e": "Apelul se face astfel: populare(2008, 07);"
+    },
+    "correct": ["a", "c"]
+  },
+
+  {
+    "question": "Fie tabelul ANGAJAT(Marca, Numepren, Compart, Datasv, Salorar, Salorarco, Compart) cu interogarea:\n\n`sql\nSELECT marca, Numepren, Datasv, vechime(datasv, 2008, 7) FROM ANGAJAT\n`\n\nși funcția:\n\n`sql\nCREATE OR REPLACE FUNCTION vechime (Datasv_ DATE, An_ Number(4), Luna_ Number(2)) RETURN Integer AS\n  prima_zi DATE := TO_DATE('01/'||Luna_||'/'||An_, 'DD/MM/YYYY');\nBEGIN\n  RETURN TRUNC(MONTHS_BETWEEN(prima_zi, Datasv_) / 12, 0);\nEND;\n`\n\nCare dintre următoarele afirmații sunt adevărate?",
+    "answers": {
+      "a": "Interogarea produce o singură valoare",
+      "b": "Apelul funcției nu este plasat corect în interogare",
+      "c": "Funcția calculează numărul de ani dintre o dată și prima zi a lunii de referință",
+      "d": "Funcția și interogarea sunt corecte",
+      "e": "Interogarea produce mai multe valori"
+    },
+    "correct": ["c", "d"]
+  },
+
+  {
+    "question": "În definirea unui cursor explicit există următoarele 5 operațiuni:\n\n1. Declararea variabilei în care va fi stocată o linie a cursorului\n2. Deschiderea cursorului (OPEN)\n3. Declararea cursorului printr-o frază SELECT (CURSOR nume IS SELECT ...)\n4. Structura de ciclare ce include, obligatoriu, o comandă de încărcare a următoarelor linii din cursor, altfel bucla se repetă la infinit\n5. Încărcarea următoarei linii din cursor (FETCH)\n\nCare este ordinea corectă a acestor operații?",
+    "answers": {
+      "a": "3, 2, 1, 4, 5",
+      "b": "3, 1, 2, 5, 4",
+      "c": "2, 3, 1, 5, 4",
+      "d": "1, 3, 2, 4, 5",
+      "e": "2, 1, 3, 4, 5"
+    },
+    "correct": ["b"]
+  },
+
+  {
+    "question": "Care este rezultatul următoarei operații în JavaScript: \"1\" + 2 + 4 ?",
+    "answers": {
+      "a": "124",
+      "b": "\"124\"",
+      "c": "eroare, asemenea operații nu pot fi efectuate",
+      "d": "\"1\" și 24",
+      "e": "\"1\" și 6"
+    },
+    "correct": ["b"]
+  },
+
+  {
+    "question": "Care este rezultatul următoarei operații în JavaScript: 2 + 5 + \"8\"?",
+    "answers": {
+      "a": "\"78\"",
+      "b": "eroare, asemenea operații nu pot fi efectuate",
+      "c": "78",
+      "d": "\"258\"",
+      "e": "258"
+    },
+    "correct": ["a"]
+  },
+
+  {
+    "question": "Ce face operatorul \"===” în JavaScript?",
+    "answers": {
+      "a": "nu există acest operator",
+      "b": "operatorul este adevărat doar dacă operatorii sunt egali fără nicio conversie de tip",
+      "c": "este operatorul egal strict",
+      "d": "operatorul este adevărat dacă operatorii sunt egali după o conversie de tip",
+      "e": "operatorul se folosește doar în cazul string-urilor"
+    },
+    "correct": ["b", "c"]
+  },
+
+  {
+    "question": "Ce face următoarea regulă CSS? `p {color: red}`",
+    "answers": {
+      "a": "Scrie cu roșu toate textele din toate paragrafele",
+      "b": "Scrie cu roșu textul din paragraful următor",
+      "c": "Atribuie variabilei p culoarea roșu",
+      "d": "Schimbă culoarea fundalului în roșu",
+      "e": "Funcția p are ca parametru culoarea roșu"
+    },
+    "correct": ["a"]
+  },
+
+  {
+    "question": "Ce face următoarea regulă CSS? `p em {color: green}`",
+    "answers": {
+      "a": "Textul scris în stil italic din paragrafe este verde",
+      "b": "Textele din paragrafe sunt scrise cu culoarea verde",
+      "c": "Textul scris în stil italic din paragraful următor este verde",
+      "d": "Cuvântul em din paragraful următor este scris cu verde",
+      "e": "Regula este scrisă greșit"
+    },
+    "correct": ["a"]
+  },
+
+  {
+    "question": "Ce rezultat are următorul cod HTML?\n\n`html\n<table onmouseover=\"this.style.backgroundColor='#EEEEEE'\" onmouseout=\"this.style.backgroundColor='#FFFFFF'\">\n  <tr>\n    <td>Your Table Data</td>\n    <td>Your Table Data</td>\n    <td>Your Table Data</td>\n  </tr>\n</table>\n`",
+    "answers": {
+      "a": "Schimbă culoarea de background a tabelului când se trece cu mouse-ul pe deasupra acestuia",
+      "b": "Creează un tabel cu 3 coloane",
+      "c": "Creează un tabel",
+      "d": "Schimbă culoarea de background a paginii din #EEEEEE în #FFFFFF când se trece cu mouse-ul peste tabel",
+      "e": "Schimbă culoarea de background a paginii din #FFFFFF în #EEEEEE când se trece cu mouse-ul peste tabel"
+    },
+    "correct": ["a"]
+  },
+
+  {
+    "question": "Ce rezultat are următorul cod?\n\n`html\n<button onclick=\"myFunction()\">Click me</button>\n`",
+    "answers": {
+      "a": "Deschide o nouă fereastră de browser cu ajutorul unui buton",
+      "b": "Nu face nimic, variabila onclick nu este declarată",
+      "c": "Creează un buton",
+      "d": "Creează un link către o nouă fereastră de browser",
+      "e": "Niciunul dintre răspunsurile de mai sus"
+    },
+    "correct": ["c"]
+  },
+
+  {
+    "question": "8. Ce rezultat are următorul cod JavaScript?\n\n`<a href=\"\" onMouseOver=\"alert('Your Message');return true;\">Linked Text</a>`",
+    "answers": {
+      "a": "În momentul în care se trece cu mouse-ul peste link sare o fereastră de alertare",
+      "b": "În momentul în care se apasă link-ul sare o fereastră de alertare",
+      "c": "În momentul în care se trece peste link cu mouse-ul browserul deschide o nouă fereastră",
+      "d": "Nu are niciun efect",
+      "e": "Niciunul dintre răspunsurile de mai sus"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "9. Cum se definește o constantă în PHP?",
+    "answers": {
+      "a": "prin directiva define()",
+      "b": "cu ajutorul cuvântului cheie const",
+      "c": "cu ajutorul cuvintelor cheie var const",
+      "d": "cu ajutorul cuvântului static",
+      "e": "cu un Macro"
+    },
+    "correct": ["a", "b"]
+  },
+  {
+    "question": "10. Cum se poate trimite un formular fără ajutorul unui buton de \"Submit\"?",
+    "answers": {
+      "a": "cu ajutorul unui hyperlink",
+      "b": "cu ajutorul unui hyperlink, dar cu ajutorul JavaScript",
+      "c": "<a href=\"javascript: document.myform.submit();\">Submit Me</a>",
+      "d": "<a href=\" myform.submit();\">Submit Me</a>",
+      "e": "nu se poate trimite"
+    },
+    "correct": ["b", "c"]
+  },
+  {
+    "question": "11. De ce următorul cod nu afișează o nouă linie corect?\n\n`<?php $str = 'Hello, there.\\nHow are you?\\nThanks for visiting fyicenter'; print $str; ?>`",
+    "answers": {
+      "a": "pentru că \"\\n\" nu este interpretat ca o linie nouă",
+      "b": "afișează corect linia nouă",
+      "c": "\"\\\" și \"n\" sunt afișate ca o secvență de caractere",
+      "d": "lipsește directiva newLine();",
+      "e": "lipsește directiva println();"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "12. Care este lungimea maximă a unui nume de tabel, de bază de date sau câmp în MySQL?",
+    "answers": {
+      "a": "tabel: 64 de caractere, baza de date: 64 de caractere, câmp: 64 de caractere",
+      "b": "48 de caractere, baza de date: 64 de caractere, câmp: 48 de caractere",
+      "c": "8 de caractere, baza de date: 8 de caractere, câmp: 8 de caractere",
+      "d": "64 de caractere, baza de date: 64 de caractere, câmp: 63 de caractere",
+      "e": "nu există limită de lungime"
+    },
+    "correct": ["d"]
+  },
+  {
+    "question": "13. Care din următoarele funcții sunt funcții de criptare în PHP?",
+    "answers": {
+      "a": "CRYPT()",
+      "b": "MD5()",
+      "c": "CRYPTED()",
+      "d": "MD6()",
+      "e": "ENCRYPT()"
+    },
+    "correct": ["a", "b"]
+  },
+  {
+    "question": "14. Ce efect are următoarea linie de cod:\n\n`<marquee>THIS WILL DISAPPEAR</marquee>`?",
+    "answers": {
+      "a": "textul dispare în fundal",
+      "b": "textul se plimbă pe ecran de la stânga la dreapta",
+      "c": "textul se plimbă pe ecran de la dreapta la stânga",
+      "d": "afișează un dreptunghi cu textul THIS WILL DISAPPER",
+      "e": "marchează textul THIS WILL DISAPPEAR"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "15. Care dintre sintaxele următoare este corectă?",
+    "answers": {
+      "a": "body {color: black}",
+      "b": "{body;color:black}",
+      "c": "body:color=black",
+      "d": "{body:color=black(body}",
+      "e": "{body=color:black(body)}"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "16. Cum se adaugă aceeași culoare de background pentru toate elementele <h1>?",
+    "answers": {
+      "a": "h1 {background-color:#FFFFFF}",
+      "b": "h1.all {background-color:#FFFFFF}",
+      "c": "all.h1 {background-color:#FFFFFF}",
+      "d": "h1 ={background-color:#FFFFFF}",
+      "e": "h1 :{background-color:#FFFFFF"
+    },
+    "correct": ["a"]
+  },
+
+  {
+    "question": "17. Care este eticheta corectă HTML pentru a scrie un text cu bold?",
+    "answers": {
+      "a": "<b>",
+      "b": "<bold>",
+      "c": "<bld>",
+      "d": "<bb>",
+      "e": "B"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "18. Care este eticheta corectă HTML pentru a scrie un hyperlink?",
+    "answers": {
+      "a": "<a>http://www.w3schools.com</a>",
+      "b": "<a url=\"http://www.w3schools.com\">W3Schools.com</a>",
+      "c": "<a href=\"http://www.w3schools.com\">W3Schools</a>",
+      "d": "<a name=\"http://www.w3schools.com\">W3Schools.com</a>",
+      "e": "<a href=\"http://www.w3schools.com\">W3Schools<a>"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "19. Care este eticheta corectă HTML pentru un link e-mail?",
+    "answers": {
+      "a": "<mail>aaa@yyy</mail>",
+      "b": "<a href=\"aaa@yyy\">",
+      "c": "<mail href=\"aaa@yyy\">",
+      "d": "<a href=\"mailto:aaa@yyy\">",
+      "e": "<a href=\"mailto:aaa@yyy\"></a>"
+    },
+    "correct": ["d"]
+  },
+  {
+    "question": "20. Care este eticheta corectă HTML pentru liste numerotate?",
+    "answers": {
+      "a": "<ul>",
+      "b": "<dl>",
+      "c": "<ol>",
+      "d": "<list>",
+      "e": "<numl>"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "21. Care este eticheta corectă HTML pentru inserarea unei imagini?",
+    "answers": {
+      "a": "<img href=\"image.gif>",
+      "b": "<img>image.gif</img>",
+      "c": "<image src=\"image.gif\">",
+      "d": "<img src=\"image.gif\">",
+      "e": "<image src=\"image.gif\"></image>"
+    },
+    "correct": ["d"]
+  },
+  {
+    "question": "22. Ce face următorul script JavaScript?\n\n`html\n<body>\n<script language=\"JavaScript\">\n\n</script>\n</body>\n`",
+    "answers": {
+      "a": "Caută un anumit cuvânt într-un text",
+      "b": "Caută cuvântul \"there\" în \"Hello there\"",
+      "c": "Caută cuvântul \"there\"",
+      "d": "Scrie variabila \"therePlace\"",
+      "e": "Caută un anumit cuvânt în string-ul \"Hello there\""
+    },
+    "correct": ["e", "a", "b", "c", "d"]
+  },
+  {
+    "question": "23. Înăuntrul cărui element HTML putem scrie un script JavaScript?",
+    "answers": {
+      "a": "<script>",
+      "b": "<js>",
+      "c": "<javascript>",
+      "d": "<scripting>",
+      "e": "<jscript>"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "24. Care este sintaxa corectă Javascript pentru a scrie \"Hello World\"?",
+    "answers": {
+      "a": "document.write(\"Hello World\")",
+      "b": "\"Hello World\"",
+      "c": "\"Hello World\"",
+      "d": "response.write(\"Hello World\")",
+      "e": "document.write(Hello World\")"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "25. Cum se scrie \"Hello World\" într-o fereastră alert?",
+    "answers": {
+      "a": "alertBox=\"Hello World\"",
+      "b": "alertBox(\"Hello World\")",
+      "c": "msgBox(\"Hello World\")",
+      "d": "alert(\"Hello World\")",
+      "e": "winalert(\"Hello World\")"
+    },
+    "correct": ["d"]
+  },
+  {
+    "question": "26. Care sunt delimitatorii pentru script-urile PHP?",
+    "answers": {
+      "a": "<script language=\"php\">...</script>",
+      "b": "<?php...?>",
+      "c": "<&>...</&>",
+      "d": "¡<?php>...</?>",
+      "e": "<php>...</php>"
+    },
+    "correct": ["a", "b"]
+  },
+  {
+    "question": "27. Cum se scrie \"Hello World\" în PHP?",
+    "answers": {
+      "a": "Document.Write(\"Hello World\");",
+      "b": "document.write(\"Hello World\");",
+      "c": "echo \"Hello World\";",
+      "d": "\"Hello World\";",
+      "e": "System.out.println(\"Hello World\");"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "28. Variabilele în PHP încep cu:",
+    "answers": {
+      "a": "$",
+      "b": "&",
+      "c": "!",
+      "d": "Nimic",
+      "e": "%"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "29. Ce înseamnă CSS?",
+    "answers": {
+      "a": "Cascading Style Sheets",
+      "b": "Colorful Style Sheets",
+      "c": "Creative Style Sheets",
+      "d": "Computer Style Sheets",
+      "e": "Cascade Style Sheets"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "30. Care este sintaxa unei reguli CSS?",
+    "answers": {
+      "a": "selector {proprietate : valoare}",
+      "b": "selector(proprietate, valoare)",
+      "c": "selector.proprietate = valoare",
+      "d": "selector(proprietate) = valoare",
+      "e": "{selector.proprietate = valoare}"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "31. CSS-ul se folosește pentru:",
+    "answers": {
+      "a": "poate fi folosit de mai mulți agenți (browser, telefon mobil, PDA)",
+      "b": "separă conținutul de prezentare",
+      "c": "îți confirmă faptul că ai scris codul corect",
+      "d": "a crea programe stand-alone",
+      "e": "a face legătura cu o bază de date"
+    },
+    "correct": ["a", "b", "c"]
+  },
+  {
+    "question": "32. Ce efect are următoarea regulă CSS?\n\n`{color:green;}`",
+    "answers": {
+      "a": "totul o să fie transformat în verde",
+      "b": "* din text sunt transformate în verde",
+      "c": "regula este un comentariu",
+      "d": "regula este scrisă greșit",
+      "e": "nu are niciun efect"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "33. Ce efect are următoarea regulă CSS?\n\n`img [title] {border: 2px solid blue;}`\n`<img src=\"images/sunset.jpg\" alt=\"Lahina Sunset\" title=\"Lahina Sunset\">`",
+    "answers": {
+      "a": "imaginea o să aibă o margine de 2px",
+      "b": "imaginea o să aibă mărimea de 2px",
+      "c": "nu are niciun efect deoarece imaginea nu este inserată corect",
+      "d": "scrie titlul imaginii cu albastru inchis",
+      "e": "titlul imaginii este încadrat de o margine de 2px"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "34. Cum se trimite în PHP un query MySQL?",
+    "answers": {
+      "a": "mysql query",
+      "b": "mysql.query",
+      "c": "query.mysql",
+      "d": "query mysql",
+      "e": "mysql q"
+    },
+    "correct": ["a"]
+  },
+  {
+    "question": "35. Ce înseamnă PHP?",
+    "answers": {
+      "a": "Personal Hypertext Processor",
+      "b": "PHP: Hypertext Preprocessor",
+      "c": "Private Home Page",
+      "d": "Personal Home Page",
+      "e": "PHP: Private Hypertext Processor"
+    },
+    "correct": ["b"]
+  },
+  {
+    "question": "36. Care este modul corect de a se conecta la o bază de date MySQL?",
+    "answers": {
+      "a": "mysql_open(\"localhost\");",
+      "b": "connect mysql(\"localhost\");",
+      "c": "mysql_connect(\"localhost\");",
+      "d": "dbopen(\"localhost\");",
+      "e": "dbconnetc(\"localhost\");"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "37. Care este modul corect de a adăuga 1 la variabila $count?",
+    "answers": {
+      "a": "$count =+1",
+      "b": "++count",
+      "c": "$count++;",
+      "d": "count++;",
+      "e": "$count==1"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "38. Unde este corect să așezăm script-uri JavaScript?",
+    "answers": {
+      "a": "secțiunea body",
+      "b": "secțiunea head",
+      "c": "secțiunea body și secțiunea head",
+      "d": "secțiunea title",
+      "e": "secțiunea title și head"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "39. Cum se poate introduce un script extern în Javascript?",
+    "answers": {
+      "a": "<script href=\"aaa.js\">",
+      "b": "<script name=\"aaa.js\">",
+      "c": "<script src=\"aaa.js\">",
+      "d": "<script src = \"aaa.java\">",
+      "e": "<script src = \"aaa.javascript\">"
+    },
+    "correct": ["c"]
+  },
+  {
+    "question": "40. Cum se scriu comentariile în JavaScript?",
+    "answers": {
+      "a": "'Acesta este un comentariu",
+      "b": "",
+      "c": "//Acesta este un comentariu",
+      "d": "Acesta este un comentariu",
+      "e": "nu se pot scrie comentarii în JavaScript"
+    },
+    "correct": ["c"]
+  }
+]
