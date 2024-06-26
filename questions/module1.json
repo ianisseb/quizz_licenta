@@ -1095,7 +1095,7 @@
     "correct": ["a"]
   },
   {
-    "question": "Ce se va afișa la execuția următorului program Java?\n\ninterface I1{\n\nfloat x=2.3f;\n\n}\n\npublic class Test implements I1{\n\npublic static void main(String [] args){\n\nSystem.out.print(x+\" \");\n\nx=6.7f;\n\nSystem.out.print(x);\n\n}\n\n}\n\nA. Va apărea eroare la compilare deoarece valoarea variabilei x nu se mai poate modifica;\n\nB. La execuție se va afișa:\n\n2.3f 6.7f;\n\nC. La execuție se va afișa:\n\n2.3f 2.3f;\n\nD. La execuție se va afișa:\n\n2.3 6.7;",
+    "question": "Ce se va afișa la execuția următorului program Java?\n\ninterface I1{\n\nfloat x=2.3f;\n\n}\n\npublic class Test implements I1{\n\npublic static void main(String [] args){\n\nSystem.out.print(x+\" \");\n\nx=6.7f;\n\nSystem.out.print(x);\n\n}\n}",
     "answers": {
       "a": "Va apărea eroare la compilare deoarece valoarea variabilei x nu se mai poate modifica;",
       "b": "La execuție se va afișa:\n\n2.3f 6.7f;",
@@ -1105,7 +1105,7 @@
     "correct": ["a"]
   },
   {
-    "question": "Ce puteți spune despre următorul program Java?\n\nclass C1{\n\nint x=1;\n\nvoid f(int x){\n\nthis.x=x;\n\n}\n\nint getX_C1(){\n\nreturn x;\n\n}\n\n}\n\nclass C2 extends C1{\n\nfloat x=5.0f;\n\nint f(int x){\n\nsuper.f((int)x);\n\n}\n\nfloat getX_C2(){\n\nreturn x;\n\n}\n\n}\n\npublic class Subiect9{\n\npublic static void main(String []args){\n\nC2 obiect = new C2();\n\nobiect.f(4);\n\nSystem.out.print(obiect.getX_C2() + \" \");\n\nSystem.out.println(obiect.getX_C1());\n\n}\n\n}\n\nA. Programul este corect și va afișa la execuție 5 4;\n\nB. Programul este corect și va afișa la execuție 4.0 4;\n\nC. Va apărea eroare la compilare deoarece în clasa C2 s-a suprascris greșit atributul x din clasa C1;\n\nD. Va apărea eroare la compilare deoarece metoda suprascrisă f() din clasa C2 întoarce un tip diferit de void;",
+    "question": "Ce puteți spune despre următorul program Java?\n\nclass C1{\n\nint x=1;\n\nvoid f(int x){\n\nthis.x=x;\n\n}\n\nint getX_C1(){\n\nreturn x;\n\n}\n\n}\n\nclass C2 extends C1{\n\nfloat x=5.0f;\n\nint f(int x){\n\nsuper.f((int)x);\n\n}\n\nfloat getX_C2(){\n\nreturn x;\n\n}\n\n}\n\npublic class Subiect9{\n\npublic static void main(String []args){\n\nC2 obiect = new C2();\n\nobiect.f(4);\n\nSystem.out.print(obiect.getX_C2() + \" \");\n\nSystem.out.println(obiect.getX_C1());\n\n}\n\n}",
     "answers": {
       "a": "Programul este corect și va afișa la execuție 5 4;",
       "b": "Programul este corect și va afișa la execuție 4.0 4;",
@@ -1115,7 +1115,7 @@
     "correct": ["d"]
   },
   {
-    "question": "Ce puteți spune despre următorul program Java?\n\npublic class Test{\n\npublic static void main(String []args){\n\nC1 obiect =new C1();\n\nobiect.f(4,3);\n\n}\n\n}\n\nclass C1{\n\npublic void f(int xx, final int yy){\n\nint a=xx+yy;\n\nfinal int b=xx-yy;\n\nclass C2{\n\npublic void g(){\n\nSystem.out.print(\"a= \"+a);\n\nSystem.out.print(\", b= \"+b);\n\n}\n\n}\n\nC2 obiect2 = new C2();\n\nobiect2.g();\n\n}\n\n}\n\nA. Programul este corect și va afișa la execuție a=4, b=3;\n\nB. Va apărea eroare la compilare, deoarece clasa C2 nu poate fi definită în metoda f() din clasa C1;\n\nC. Va apărea eroare la compilare deoarece în metoda g() nu putem accesa variabila locală a din metoda f();\n\nD. Va apărea eroare la compilare deoarece nu se creează în clasa Test un obiect de tip C1.C2;",
+    "question": "Ce puteți spune despre următorul program Java?\n\npublic class Test{\n\npublic static void main(String []args){\n\nC1 obiect =new C1();\n\nobiect.f(4,3);\n\n}\n\n}\n\nclass C1{\n\npublic void f(int xx, final int yy){\n\nint a=xx+yy;\n\nfinal int b=xx-yy;\n\nclass C2{\n\npublic void g(){\n\nSystem.out.print(\"a= \"+a);\n\nSystem.out.print(\", b= \"+b);\n\n}\n\n}\n\nC2 obiect2 = new C2();\n\nobiect2.g();\n\n}\n\n}",
     "answers": {
       "a": "Programul este corect și va afișa la execuție a=4, b=3;",
       "b": "Va apărea eroare la compilare, deoarece clasa C2 nu poate fi definită în metoda f() din clasa C1;",
