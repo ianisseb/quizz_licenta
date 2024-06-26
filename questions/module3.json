@@ -525,7 +525,8 @@
   },
 
   {
-    "question": "Ce rezultat are următorul cod HTML?\n\n`html\n<table onmouseover=\"this.style.backgroundColor='#EEEEEE'\" onmouseout=\"this.style.backgroundColor='#FFFFFF'\">\n  <tr>\n    <td>Your Table Data</td>\n    <td>Your Table Data</td>\n    <td>Your Table Data</td>\n  </tr>\n</table>\n`",
+    "question": "Ce rezultat are următorul cod HTML?",
+    "image": "images_modul1/15.png",
     "answers": {
       "a": "Schimbă culoarea de background a tabelului când se trece cu mouse-ul pe deasupra acestuia",
       "b": "Creează un tabel cu 3 coloane",
@@ -704,7 +705,8 @@
     "correct": ["d"]
   },
   {
-    "question": "22. Ce face următorul script JavaScript?\n\n`html\n<body>\n<script language=\"JavaScript\">\n\n</script>\n</body>\n`",
+    "question": "22. Ce face următorul script JavaScript?",
+    "image": "images_modul1/16.png",
     "answers": {
       "a": "Caută un anumit cuvânt într-un text",
       "b": "Caută cuvântul \"there\" în \"Hello there\"",
