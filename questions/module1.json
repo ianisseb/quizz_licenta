@@ -1068,14 +1068,14 @@
     "question": "Fie următorul program Java:\n\npublic class Program{\n\nstatic void f(int k){\n\nswitch(k){\n\ndefault: System.out.print(\"i \"); break;\n\ncase 1: System.out.print(\"1 \"); break;\n\ncase 2: case 3: System.out.print(\"23 \"); break;\n\ncase 4: case 5: System.out.print(\"45 \");\n\n}\n\n}\n\npublic static void main(String []args){\n\nfor(int i=0;i<6;i++)\n\nf(i);\n\n}\n\n}\n\nCare afirmații sunt adevărate?",
     "answers": {
       "a": "Programul produce eroare la compilare;",
-      "b": "Programul se compilează și la execuție afișează\n\ni 1 23 23 45 45 ;",
-      "c": "Programul se compilează și la execuție afișează\n\ni 1 23 45 ;",
-      "d": "Programul se compilează și la execuție afișează\n\ni 1 23 23 45 45 i;"
+      "b": "Programul se compilează și la execuție afișează i 1 23 23 45 45 ;",
+      "c": "Programul se compilează și la execuție afișează i 1 23 45 ;",
+      "d": "Programul se compilează și la execuție afișează i 1 23 23 45 45 i;"
     },
     "correct": ["b"]
   },
   {
-    "question": "Fie următorul cod Java:\n\nbyte b=-7 >>> 1;\n\nSystem.out.println(b);\n\nCe se poate spune despre acest cod, dacă este integrat într-un program Java?",
+    "question": "Fie următorul cod Java:\nbyte b=-7 >>> 1;\nSystem.out.println(b);\nCe se poate spune despre acest cod, dacă este integrat într-un program Java?",
     "answers": {
       "a": "Va produce eroare la compilare;",
       "b": "Va produce eroare la execuție;",
@@ -1085,11 +1085,11 @@
     "correct": ["a"]
   },
   {
-    "question": "Ce puteți afirma despre următorul program Java?\n\npublic class Static1{\n\npublic static void main(String []args){\n\nStatic2 a=new Static2();\n\nStatic2 b=new Static2();\n\nSystem.out.print(\"a.x= \"+ a.x);\n\na.x=100; b.x=200;\n\nSystem.out.print(\"a.x= \"+a.x);\n\n}\n\n}\n\nclass Static2{\n\nstatic int x=0;\n\nStatic2()\n\n{\n\nx++;\n\n};\n\n}\n\nA. Afișează:\n\na.x=2 a.x=200;\n\nB. Afișează:\n\na.x=0 a.x=100;\n\nC. Afișează:\n\na.x=1 a.x=100;\n\nD. Programul nu este corect deoarece asignarea lui x, conform obiectului b, este ilegală în Java;",
+    "question": "Ce puteți afirma despre următorul program Java?\npublic class Static1{\npublic static void main(String []args){\n\nStatic2 a=new Static2();\n\nStatic2 b=new Static2();\nSystem.out.print(\"a.x= \"+ a.x);\n\na.x=100; b.x=200;\n\nSystem.out.print(\"a.x= \"+a.x);\n}\n}\nclass Static2{\n\nstatic int x=0;\n\nStatic2()\n\n{\n\nx++;\n\n};\n}",
     "answers": {
-      "a": "Afișează:\n\na.x=2 a.x=200;",
-      "b": "Afișează:\n\na.x=0 a.x=100;",
-      "c": "Afișează:\n\na.x=1 a.x=100;",
+      "a": "Afișează: na.x=2 a.x=200;",
+      "b": "Afișează: a.x=0 a.x=100;",
+      "c": "Afișează: a.x=1 a.x=100;",
       "d": "Programul nu este corect deoarece asignarea lui x, conform obiectului b, este ilegală în Java;"
     },
     "correct": ["a"]
