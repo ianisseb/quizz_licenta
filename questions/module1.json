@@ -720,8 +720,8 @@
     "question": "Ce se va afişa pe ecran în urma execuţiei următorului program?",
     "code": "#include <iostream.h>\nclass Test {\nint n;\npublic:\nTest(int x):n(x){}\nint f(int n, int &x, int *p){\nn=this->n;\nx=n++;\n*p=this->n + n;\nreturn n;\n}\n};\nvoid main(){\nTest t(2);\nint n=6,x=0x10,p=1;\ncout<<t.f(n,x,&p)<<\" \";\ncout<<n<<\" \"<<x<<\" \"<<p;\n}",
     "answers": {
-      "a": "3 6 16 1",
-      "b": "3 6 2 5",
+      "a": "3 6 2 5",
+      "b": "3 6 16 1",
       "c": "6 6 10 1",
       "d": "3 7 10 1",
       "e": "Eroare de compilare deoarece constructorul nu conţine nicio instrucţiune"
@@ -801,9 +801,9 @@
     "question": "Ce se va afişa pe ecran în urma execuţiei următorului program?",
     "code": "#include <iostream.h>\nclass B {\npublic:\n  virtual void f() { cout<<\"B::f() \";}\n};\nclass D1: public B{\npublic:\n  void f() { cout<<\"D1::f() \";}\n};\nclass D2: public B{\npublic:\n  void f() { cout<<\"D2::f() \";}\n};\nvoid main(){\n  int i;\n  B b[] = { B(), D1(), D2()};\n  for (i=2;i>=0;i--) {b[i].f();}\n}",
     "answers": {
-      "a": "B::f() D1::f() D2::f()",
+      "a": "B::f() B::f() B::f()",
       "b": "D2::f() D1::f() B::f()",
-      "c": "B::f() B::f() B::f()",
+      "c": "B::f() D1::f() D2::f()",
       "d": "B::f() D1::f() D2::f()"
     },
     "correct": ["a"]
@@ -967,7 +967,7 @@
       "d": "Programul va afisa valorile: 23",
       "e": "Programul afiseaza valorile lui p1"
     },
-    "correct": ["c", "e"]
+    "correct": ["c", "d"]
   },
 
   {
@@ -1003,7 +1003,7 @@
       "b": "Supraîncarcă operatorul()",
       "c": "Este o metodă oarecare a clasei care nu produce supraîncărcarea unor operatori",
       "d": "Este un constructor",
-      "e": "Supraîncarcă un operator unar"
+      "e": "Supraîncarcă un operatorul []"
     },
     "correct": ["e"]
   },
@@ -1232,7 +1232,7 @@
       "c": "Programul se compilează și la execuție afișează\n\ni 1 21 26 ;",
       "d": "Programul se compilează și la execuție afișează\n\ni 1 21 21 26 26 i;"
     },
-    "correct": ["a", "d", "d"]
+    "correct": ["a", "c", "d"]
   },
   {
     "question": "Se utilizează protected în Java pentru date și metode la care nu este necesar:",
@@ -1302,7 +1302,7 @@
       "c": "jar cfv arhiva.jar *.class *.jpg *.au;",
       "d": "jar cvf arhiva.jar ClasaPrincipala.class AltaClasa.class imagine.jpg sunet.au"
     },
-    "correct": ["a", "c", "d"]
+    "correct": ["a", "c"]
   },
   {
     "question": "În care din exemplele de mai jos se folosește corect variabila iLocation?",
@@ -1445,7 +1445,7 @@
       "d": "(5, 2, 2, 2, 1, 2)",
       "e": "(5, 2, 3, 2, 1, 2)"
     },
-    "correct": ["a"]
+    "correct": ["d"]
   },
   {
     "question": "Se consideră graful neorientat cu mulțimea vârfurilor {1, 2, 3, 4, 5, 6} și mulțimea muchiilor {[1, 2], [2, 3], [3, 4], [3, 5], [4, 5], [1, 3], [2, 6], [2, 4], [4, 6]}. Care este numărul minim de muchii ce trebuie eliminate (care sunt aceste muchii) astfel încât graful parțial obținut să nu mai fie conex?",
@@ -1631,7 +1631,7 @@
       "b": "f(n)g(n) ∈ Θ(n^2)",
       "c": "f(n)g(n) ∈ O(n^2)"
     },
-    "correct": ["b"]
+    "correct": ["a"]
   },
   {
     "question": "Pentru f(n) = 6n^3 + 14n^2 − 8n+ 4 şi g(n) = 2n^3 care din următoarele afirmaţii sunt adevărate?",
