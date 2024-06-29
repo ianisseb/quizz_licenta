@@ -16,13 +16,11 @@ const module1Btn = document.getElementById("module1-btn");
 const module2Btn = document.getElementById("module2-btn");
 const module3Btn = document.getElementById("module3-btn");
 const randomQuizBtn = document.getElementById("random-quiz-btn");
-const hardQuizBtn = document.getElementById("hard-quiz-btn"); // Noua linie
 
 module1Btn.addEventListener("click", () => selectModule("module1"));
 module2Btn.addEventListener("click", () => selectModule("module2"));
 module3Btn.addEventListener("click", () => selectModule("module3"));
 randomQuizBtn.addEventListener("click", startRandomQuiz);
-hardQuizBtn.addEventListener("click", startHardQuiz); // Noua linie
 
 submitBtn.addEventListener("click", submitAnswer);
 
@@ -87,52 +85,6 @@ function startRandomQuiz() {
     });
 }
 
-function startHardQuiz() {
-  Promise.all([
-    fetch("./questions/module1.json").then((response) => response.json()),
-    fetch("./questions/module2.json").then((response) => response.json()),
-    fetch("./questions/module3.json").then((response) => response.json()),
-  ])
-    .then((data) => {
-      const [module1Questions, module2Questions, module3Questions] = data;
-      const hardQuestions = [];
-
-      hardQuestions.push(...getRandomQuestions(module1Questions, 10));
-      hardQuestions.push(...getRandomQuestions(module2Questions, 10));
-      hardQuestions.push(...getRandomQuestions(module3Questions, 10));
-
-      shuffleArray(hardQuestions);
-
-      quizData = hardQuestions.slice(0, 30);
-      currentQuiz = 0;
-      score = 0;
-      attempts = [];
-      startHardQuizTimer();
-      loadQuiz();
-    })
-    .catch((error) => {
-      alert("Failed to load questions");
-      console.error(
-        "There has been a problem with your fetch operation:",
-        error
-      );
-    });
-}
-
-function startHardQuizTimer() {
-  let time = 180; // 3 minute
-  clearInterval(timerInterval);
-  timerInterval = setInterval(() => {
-    time--;
-    timerEl.innerText = `Time: ${time}`;
-    if (time <= 0) {
-      clearInterval(timerInterval);
-      alert("Time is up!");
-      showResults();
-    }
-  }, 1000);
-}
-
 function getRandomQuestions(array, num) {
   const shuffled = array.sort(() => 0.5 - Math.random());
   return shuffled.slice(0, num);
@@ -143,16 +95,6 @@ function shuffleArray(array) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
-}
-
-function shuffleAnswers(answers) {
-  const keys = Object.keys(answers);
-  shuffleArray(keys);
-  const shuffledAnswers = {};
-  keys.forEach(key => {
-    shuffledAnswers[key] = answers[key];
-  });
-  return shuffledAnswers;
 }
 
 function loadQuiz() {
@@ -180,9 +122,7 @@ function loadQuiz() {
     questionEl.appendChild(codeContainer);
   }
 
-  const shuffledAnswers = shuffleAnswers(currentQuizData.answers);
-
-  Object.keys(shuffledAnswers).forEach((key) => {
+  Object.keys(currentQuizData.answers).forEach((key) => {
     const li = document.createElement("li");
     const input = document.createElement("input");
     input.type = "checkbox";
@@ -193,7 +133,7 @@ function loadQuiz() {
     const label = document.createElement("label");
     label.htmlFor = key;
     label.id = `${key}_text`;
-    label.innerText = shuffledAnswers[key];
+    label.innerText = currentQuizData.answers[key];
 
     li.appendChild(input);
     li.appendChild(label);
