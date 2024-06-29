@@ -1,6 +1,7 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #000; 
+  color: #fff; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +34,7 @@ body {
 }
 
 .quiz-container {
-  background-color: #fff;
+  background-color: #333; 
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -41,6 +42,7 @@ body {
   padding: 20px;
   text-align: center;
   box-sizing: border-box;
+  color: #fff; 
 }
 
 .quiz-header img {
@@ -58,8 +60,9 @@ ul {
 li {
   margin-bottom: 15px;
   text-align: left;
-  background-color: lightblue;
-  padding: 5px;
+  background-color: #555; 
+  color: #fff; 
+  padding: 10px;
   border-radius: 3px;
 }
 
@@ -83,7 +86,7 @@ button:hover {
 }
 
 .correct {
-  color: green;
+  color: rgb(6, 189, 6);
 }
 
 .incorrect {
@@ -127,5 +130,6 @@ button:hover {
   border-radius: 5px;
   margin: 20px auto;
   max-width: 600px;
-  background-color: white; /* Background color for the questions */
+  background-color: #444; /* Fundal gri inchis pentru întrebări */
+  color: #fff; /* Text alb pentru întrebări */
 }
