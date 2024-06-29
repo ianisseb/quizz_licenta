@@ -398,7 +398,7 @@
       "d": "managementul dispozitivelor periferice",
       "e": "managementul proceselor"
     },
-    "correct": ["a", "d", "e"]
+    "correct": ["a", "c", "d", "e"]
   },
   {
     "question": "Prin construcţia sistemului calculator fiecărui nivel de ı̂ntrerupere i se asociază:",
