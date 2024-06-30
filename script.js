@@ -16,11 +16,13 @@ const module1Btn = document.getElementById("module1-btn");
 const module2Btn = document.getElementById("module2-btn");
 const module3Btn = document.getElementById("module3-btn");
 const randomQuizBtn = document.getElementById("random-quiz-btn");
+const fullyRandomQuizBtn = document.getElementById("fully-random-quiz-btn");
 
 module1Btn.addEventListener("click", () => selectModule("module1"));
 module2Btn.addEventListener("click", () => selectModule("module2"));
 module3Btn.addEventListener("click", () => selectModule("module3"));
 randomQuizBtn.addEventListener("click", startRandomQuiz);
+fullyRandomQuizBtn.addEventListener("click", startFullyRandomQuiz);
 
 submitBtn.addEventListener("click", submitAnswer);
 
@@ -85,6 +87,45 @@ function startRandomQuiz() {
     });
 }
 
+function startFullyRandomQuiz() {
+  Promise.all([
+    fetch("./questions/module1.json").then((response) => response.json()),
+    fetch("./questions/module2.json").then((response) => response.json()),
+    fetch("./questions/module3.json").then((response) => response.json()),
+  ])
+    .then((data) => {
+      const [module1Questions, module2Questions, module3Questions] = data;
+      const allQuestions = [
+        ...module1Questions,
+        ...module2Questions,
+        ...module3Questions,
+      ];
+
+      // Shuffle all questions and select a subset
+      shuffleArray(allQuestions);
+      const randomQuestions = allQuestions.slice(0, 30);
+
+      // Shuffle answers within each question
+      randomQuestions.forEach((question) => {
+        question.answers = shuffleAnswers(question.answers);
+      });
+
+      quizData = randomQuestions;
+      currentQuiz = 0;
+      score = 0;
+      attempts = [];
+      startTimer();
+      loadQuiz();
+    })
+    .catch((error) => {
+      alert("Failed to load questions");
+      console.error(
+        "There has been a problem with your fetch operation:",
+        error
+      );
+    });
+}
+
 function getRandomQuestions(array, num) {
   const shuffled = array.sort(() => 0.5 - Math.random());
   return shuffled.slice(0, num);
@@ -95,6 +136,19 @@ function shuffleArray(array) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
+}
+
+function shuffleAnswers(answers) {
+  const keys = Object.keys(answers);
+  for (let i = keys.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [keys[i], keys[j]] = [keys[j], keys[i]];
+  }
+  const shuffledAnswers = {};
+  keys.forEach((key) => {
+    shuffledAnswers[key] = answers[key];
+  });
+  return shuffledAnswers;
 }
 
 function loadQuiz() {
@@ -122,7 +176,9 @@ function loadQuiz() {
     questionEl.appendChild(codeContainer);
   }
 
-  Object.keys(currentQuizData.answers).forEach((key) => {
+  const shuffledAnswers = shuffleAnswers(currentQuizData.answers);
+
+  Object.keys(shuffledAnswers).forEach((key) => {
     const li = document.createElement("li");
     const input = document.createElement("input");
     input.type = "checkbox";
@@ -133,7 +189,7 @@ function loadQuiz() {
     const label = document.createElement("label");
     label.htmlFor = key;
     label.id = `${key}_text`;
-    label.innerText = currentQuizData.answers[key];
+    label.innerText = shuffledAnswers[key];
 
     li.appendChild(input);
     li.appendChild(label);
@@ -251,19 +307,16 @@ function showResults() {
       (attempt, index) => `
     <li>
       <strong>Q${index + 1}: ${attempt.question}</strong><br>
-      <span class="${attempt.isCorrect ? "correct" : "incorrect"}">
-        Your answer: ${attempt.selected.join(", ")}<br>
-        Correct answer: ${attempt.correct.join(", ")}
-      </span>
-    </li>
-  `
+      <span class="correct-answer">Correct Answer(s): ${attempt.correct.join(
+        ", "
+      )}</span><br>
+      <span class="${attempt.isCorrect ? "correct" : "incorrect"}">${
+        attempt.isCorrect ? "Correct" : "Incorrect"
+      }</span><br>
+      Your Answer(s): ${attempt.selected.join(", ")}
+    </li>`
     )
     .join("");
-
-  const scoreDisplay = document.createElement("h3");
-  scoreDisplay.innerText = `Your score: ${score}/${quizData.length}`;
-  resultsContainer.insertBefore(scoreDisplay, resultsContainer.firstChild);
-
-  quiz.style.display = "none";
   resultsContainer.style.display = "block";
+  quiz.style.display = "none";
 }
