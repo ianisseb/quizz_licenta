@@ -999,11 +999,11 @@
     "question": "Se considera secventa. Ce se poate afirma despre operator[]()?",
     "code": "class A {\\nint a[3];\\npublic:\\nA(int xi, int yi, int zi ){\\na[0]=xi;a[1]=yi;a[2]=zi;\\n}\\nint &operator[](int i){\\nreturn a[i];\\n}\\n};\\nvoid main() {\\nA o(1, 2, 3);\\ncout<<o[0];\\no[1]=10;\\ncout<<o[1];\\n}",
     "answers": {
-      "a": "Supraîncarcă operatorul[]",
-      "b": "Supraîncarcă operatorul()",
+      "a": "Supraîncarcă operatorul()",
+      "b": "Supraîncarcă un operator unar",
       "c": "Este o metodă oarecare a clasei care nu produce supraîncărcarea unor operatori",
       "d": "Este un constructor",
-      "e": "Supraîncarcă un operatorul []"
+      "e": "Supraîncarcă operatorul []"
     },
     "correct": ["e"]
   },
