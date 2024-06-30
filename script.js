@@ -69,8 +69,6 @@ function startRandomQuiz() {
       randomQuestions.push(...getRandomQuestions(module2Questions, 10));
       randomQuestions.push(...getRandomQuestions(module3Questions, 10));
 
-      shuffleArray(randomQuestions);
-
       quizData = randomQuestions.slice(0, 30);
       currentQuiz = 0;
       score = 0;
@@ -176,9 +174,9 @@ function loadQuiz() {
     questionEl.appendChild(codeContainer);
   }
 
-  const shuffledAnswers = shuffleAnswers(currentQuizData.answers);
+  const answers = currentQuizData.answers;
 
-  Object.keys(shuffledAnswers).forEach((key) => {
+  Object.keys(answers).forEach((key) => {
     const li = document.createElement("li");
     const input = document.createElement("input");
     input.type = "checkbox";
@@ -189,7 +187,7 @@ function loadQuiz() {
     const label = document.createElement("label");
     label.htmlFor = key;
     label.id = `${key}_text`;
-    label.innerText = shuffledAnswers[key];
+    label.innerText = answers[key];
 
     li.appendChild(input);
     li.appendChild(label);
@@ -306,7 +304,7 @@ function showResults() {
     .map(
       (attempt, index) => `
     <li>
-      <strong>Q${index + 1}: ${attempt.question}</strong><br>
+      <strong>Question ${index + 1}:</strong> ${attempt.question}<br>
       <span class="correct-answer">Correct Answer(s): ${attempt.correct.join(
         ", "
       )}</span><br>
@@ -317,6 +315,11 @@ function showResults() {
     </li>`
     )
     .join("");
+
+  const scoreDisplay = document.createElement("h3");
+  scoreDisplay.innerText = `You answered ${score} out of ${quizData.length} questions correctly.`;
+  resultsContainer.insertBefore(scoreDisplay, resultsList);
+
   resultsContainer.style.display = "block";
   quiz.style.display = "none";
 }
